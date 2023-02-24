@@ -1,0 +1,31 @@
+<mvc:View controllerName="viatrix.controller.VendorRegistrationForm"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Wizard id="supplierdetailId" renderMode="Page" showNextButton="false" class="sigWizard" navigationChange="handleNavigationChange">
+                <WizardStep id="companyinfoID" class="sigWizardstep" title="General Information" validated="true">
+                    <content>
+                        
+                    </content>
+                </WizardStep>
+                <WizardStep id="banktaxId" class="sigWizardstep" title="Tax Information" validated="true">
+                    <content>
+                        
+                    </content>
+                </WizardStep>
+                <WizardStep id="contactId" class="sigWizardstep" title="Bank Information" validated="true">
+                    <content>
+                      
+                    </content>
+                </WizardStep>
+                <WizardStep title="Company Code Information" >
+                </WizardStep>
+                <WizardStep title="Purchasing Organisation Information" >
+                </WizardStep>
+                <WizardStep title="Documents and Attachments" >
+                </WizardStep>
+            </Wizard>
+        </content>
+    </Page>
+</mvc:View>
