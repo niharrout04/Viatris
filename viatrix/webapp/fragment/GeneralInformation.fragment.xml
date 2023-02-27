@@ -5,7 +5,7 @@
             <l:Grid defaultSpan="XL3 L3 M6 S12" id="idSupDet1">
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Vendor Account Group" class="sigLabel" />
-                    <ComboBox class="sigComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
+                    <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
                         <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
                     </ComboBox>
                 </VBox>
@@ -13,433 +13,441 @@
             <l:Grid defaultSpan="XL3 L3 M6 S12" id="idSupDet">
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 1" class="sigLabel" />
-                    <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 2" class="sigLabel" />
-                    <Input class="sigInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 3" class="sigLabel" />
-                    <Input class="sigInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 4" class="sigLabel" />
-                    <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Search Term 1" class="sigLabel" />
-                    <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Search Term 2" class="sigLabel" />
-                    <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
             </l:Grid>
         </VBox>
-        <Panel expandable="true" expanded="true" headerText="Main Address" class="sapUiMediumMarginTop vendorRegistrationFormPanel">
-            <VBox>
-                <l:Grid defaultSpan="XL3 L3 M6 S12">
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st1}" class="sigLabel" required="true" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st1}"
-                            value="{oSupplierDetailModel>/vendorAddress/street}"
-                            maxLength="60"
-                            valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                            valueStateText="{i18n>ManFields}"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            liveChange="onAddingmandvalue"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st2}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st2}"
-                            value="{oSupplierDetailModel>/vendorAddress/street2}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street2" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st3}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st3}"
-                            value="{oSupplierDetailModel>/vendorAddress/street3}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street3" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st4}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st4}"
-                            value="{oSupplierDetailModel>/vendorAddress/street4}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street4" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st5}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st5}"
-                            value="{oSupplierDetailModel>/vendorAddress/street5}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street5" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>City}" class="sigLabel" required="true" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>City}"
-                            value="{oSupplierDetailModel>/vendorAddress/city}"
-                            maxLength="40"
-                            valueState="{oMandatoryModel>/vendorAddress/cityState}"
-                            valueStateText="{i18n>ManFields}"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            liveChange="onAddingmandvalue"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="city" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>Pincode}"
-                            value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
-                            liveChange="validatePostalCode"
-                            valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
-                            valueStateText="{i18n>ManFields}"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="cityPostalCode" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Country}" class="sigLabel" required="true" />
-                        <ComboBox
-                            class="sigComboBox"
-                            width="100%"
-                            placeholder="Select {i18n>Country}"
-                            items="{oDropdownModel>/country}"
-                            change="onCountrySelect"
-                            selectedKey="{oSupplierDetailModel>/vendorAddress/countryKey}"
-                            valueState="{oMandatoryModel>/vendorAddress/countryKeyState}"
-                            valueStateText="{i18n>ManFields}"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            showSecondaryValues="true"
-                            selectionChange="onAddingmandvalue"
-                        >
-                            <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryKey}" additionalText="{oDropdownModel>countryName}" />
-                        </ComboBox>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>CompanyPhone}" class="sigLabel" required="true" />
-                        <HBox renderType="Bare">
-                            <ComboBox
-                                class="sigComboBox"
-                                width="50%"
-                                items="{oDropdownModel>/phoneCountryCode}"
-                                showSecondaryValues="true"
-                                change="onChangeCountryCode"
-                                selectedKey="{oSupplierDetailModel>/countryCode}"
-                                valueState="{oMandatoryModel>/phoneCountrycodeState}"
+        <VBox class="vendorRegistrationFormSection sapUiMediumMarginTop">
+            <Panel expandable="true" expanded="true" headerText="Main Address" class=" vendorRegistrationFormPanel">
+                <VBox>
+                    <l:Grid defaultSpan="XL3 L3 M6 S12">
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st1}" class="sigLabel" required="true" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st1}"
+                                value="{oSupplierDetailModel>/vendorAddress/street}"
+                                maxLength="60"
+                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
                                 valueStateText="{i18n>ManFields}"
-                                selectionChange="onAddingmandvalue"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                liveChange="onAddingmandvalue"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st2}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st2}"
+                                value="{oSupplierDetailModel>/vendorAddress/street2}"
+                                maxLength="40"
+                                change="oAddressChange"
                                 enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
                             >
-                                <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
-                            </ComboBox>
+                                <customData>
+                                    <core:CustomData key="target" value="street2" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st3}" class="sigLabel" />
                             <Input
-                                class="sigInputText"
-                                placeholder="Enter {i18n>CompanyPhone}"
-                                value="{oSupplierDetailModel>/mobileNumber}"
-                                valueState="{oMandatoryModel>/mobileNumberState}"
-                                valueStateText="{i18n>ManFields}"
-                                liveChange="onPhoneNumberChange"
+                                class="voInputText"
+                                placeholder="Enter {i18n>st3}"
+                                value="{oSupplierDetailModel>/vendorAddress/street3}"
+                                maxLength="40"
+                                change="oAddressChange"
                                 enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            />
-                        </HBox>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Fax}" class="sigLabel" />
-                        <Input class="sigInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Website}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>Website}"
-                            value="{oSupplierDetailModel>/vendorAddress/website}"
-                            maxLength="2048"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="website" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Region}" class="sigLabel" />
-                        <ComboBox
-                            class="sigComboBox"
-                            width="100%"
-                            placeholder="Select {i18n>Region}"
-                            items="{oDropdownModel>/region}"
-                            selectedKey="{oSupplierDetailModel>/vendorAddress/region}"
-                            change="oRegionChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
-                        </ComboBox>
-                    </VBox>
-                </l:Grid>
-            </VBox>
-        </Panel>
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street3" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st4}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st4}"
+                                value="{oSupplierDetailModel>/vendorAddress/street4}"
+                                maxLength="40"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street4" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st5}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st5}"
+                                value="{oSupplierDetailModel>/vendorAddress/street5}"
+                                maxLength="40"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street5" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>City}" class="sigLabel" required="true" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>City}"
+                                value="{oSupplierDetailModel>/vendorAddress/city}"
+                                maxLength="40"
+                                valueState="{oMandatoryModel>/vendorAddress/cityState}"
+                                valueStateText="{i18n>ManFields}"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                liveChange="onAddingmandvalue"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="city" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>Pincode}"
+                                value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
+                                liveChange="validatePostalCode"
+                                valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
+                                valueStateText="{i18n>ManFields}"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="cityPostalCode" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Country}" class="sigLabel" required="true" />
+                            <ComboBox
+                                class="voComboBox"
+                                width="100%"
+                                placeholder="Select {i18n>Country}"
+                                items="{oDropdownModel>/country}"
+                                change="onCountrySelect"
+                                selectedKey="{oSupplierDetailModel>/vendorAddress/countryKey}"
+                                valueState="{oMandatoryModel>/vendorAddress/countryKeyState}"
+                                valueStateText="{i18n>ManFields}"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                showSecondaryValues="true"
+                                selectionChange="onAddingmandvalue"
+                            >
+                                <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryKey}" additionalText="{oDropdownModel>countryName}" />
+                            </ComboBox>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>CompanyPhone}" class="sigLabel" required="true" />
+                            <HBox renderType="Bare">
+                                <ComboBox
+                                    class="voComboBox"
+                                    width="50%"
+                                    items="{oDropdownModel>/phoneCountryCode}"
+                                    showSecondaryValues="true"
+                                    change="onChangeCountryCode"
+                                    selectedKey="{oSupplierDetailModel>/countryCode}"
+                                    valueState="{oMandatoryModel>/phoneCountrycodeState}"
+                                    valueStateText="{i18n>ManFields}"
+                                    selectionChange="onAddingmandvalue"
+                                    enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                >
+                                    <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
+                                </ComboBox>
+                                <Input
+                                    class="voInputText"
+                                    placeholder="Enter {i18n>CompanyPhone}"
+                                    value="{oSupplierDetailModel>/mobileNumber}"
+                                    valueState="{oMandatoryModel>/mobileNumberState}"
+                                    valueStateText="{i18n>ManFields}"
+                                    liveChange="onPhoneNumberChange"
+                                    enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                />
+                            </HBox>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Fax}" class="sigLabel" />
+                            <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Website}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>Website}"
+                                value="{oSupplierDetailModel>/vendorAddress/website}"
+                                maxLength="2048"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="website" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Region}" class="sigLabel" />
+                            <ComboBox
+                                class="voComboBox"
+                                width="100%"
+                                placeholder="Select {i18n>Region}"
+                                items="{oDropdownModel>/region}"
+                                selectedKey="{oSupplierDetailModel>/vendorAddress/region}"
+                                change="oRegionChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
+                            </ComboBox>
+                        </VBox>
+                    </l:Grid>
+                </VBox>
+            </Panel>
+        </VBox>
+
         <CheckBox text="Company Location(site) order from Address is different from Main Address" />
-        <Panel expandable="true" headerText="Ordering Address" class="sapUiMediumMarginTop vendorRegistrationFormPanel">
-            <VBox>
-                <l:Grid defaultSpan="XL3 L3 M6 S12">
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st1}" class="sigLabel" required="true" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st1}"
-                            value="{oSupplierDetailModel>/vendorAddress/street}"
-                            maxLength="60"
-                            valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                            valueStateText="{i18n>ManFields}"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            liveChange="onAddingmandvalue"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st2}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st2}"
-                            value="{oSupplierDetailModel>/vendorAddress/street2}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street2" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st3}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st3}"
-                            value="{oSupplierDetailModel>/vendorAddress/street3}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street3" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st4}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st4}"
-                            value="{oSupplierDetailModel>/vendorAddress/street4}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street4" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>st5}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>st5}"
-                            value="{oSupplierDetailModel>/vendorAddress/street5}"
-                            maxLength="40"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="street5" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>City}" class="sigLabel" required="true" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>City}"
-                            value="{oSupplierDetailModel>/vendorAddress/city}"
-                            maxLength="40"
-                            valueState="{oMandatoryModel>/vendorAddress/cityState}"
-                            valueStateText="{i18n>ManFields}"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            liveChange="onAddingmandvalue"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="city" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>Pincode}"
-                            value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
-                            liveChange="validatePostalCode"
-                            valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
-                            valueStateText="{i18n>ManFields}"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="cityPostalCode" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Country}" class="sigLabel" required="true" />
-                        <ComboBox
-                            class="sigComboBox"
-                            width="100%"
-                            placeholder="Select {i18n>Country}"
-                            items="{oDropdownModel>/country}"
-                            change="onCountrySelect"
-                            selectedKey="{oSupplierDetailModel>/vendorAddress/countryKey}"
-                            valueState="{oMandatoryModel>/vendorAddress/countryKeyState}"
-                            valueStateText="{i18n>ManFields}"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            showSecondaryValues="true"
-                            selectionChange="onAddingmandvalue"
-                        >
-                            <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryKey}" additionalText="{oDropdownModel>countryName}" />
-                        </ComboBox>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>CompanyPhone}" class="sigLabel" required="true" />
-                        <HBox renderType="Bare">
-                            <ComboBox
-                                class="sigComboBox"
-                                width="50%"
-                                items="{oDropdownModel>/phoneCountryCode}"
-                                showSecondaryValues="true"
-                                change="onChangeCountryCode"
-                                selectedKey="{oSupplierDetailModel>/countryCode}"
-                                valueState="{oMandatoryModel>/phoneCountrycodeState}"
+        <VBox class="vendorRegistrationFormSection sapUiMediumMarginTop">
+            <Panel expandable="true" headerText="Ordering Address" class=" vendorRegistrationFormPanel">
+                <VBox>
+                    <l:Grid defaultSpan="XL3 L3 M6 S12">
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st1}" class="sigLabel" required="true" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st1}"
+                                value="{oSupplierDetailModel>/vendorAddress/street}"
+                                maxLength="60"
+                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
                                 valueStateText="{i18n>ManFields}"
-                                selectionChange="onAddingmandvalue"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                liveChange="onAddingmandvalue"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st2}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st2}"
+                                value="{oSupplierDetailModel>/vendorAddress/street2}"
+                                maxLength="40"
+                                change="oAddressChange"
                                 enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
                             >
-                                <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
-                            </ComboBox>
+                                <customData>
+                                    <core:CustomData key="target" value="street2" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st3}" class="sigLabel" />
                             <Input
-                                class="sigInputText"
-                                placeholder="Enter {i18n>CompanyPhone}"
-                                value="{oSupplierDetailModel>/mobileNumber}"
-                                valueState="{oMandatoryModel>/mobileNumberState}"
-                                valueStateText="{i18n>ManFields}"
-                                liveChange="onPhoneNumberChange"
+                                class="voInputText"
+                                placeholder="Enter {i18n>st3}"
+                                value="{oSupplierDetailModel>/vendorAddress/street3}"
+                                maxLength="40"
+                                change="oAddressChange"
                                 enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            />
-                        </HBox>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Fax}" class="sigLabel" />
-                        <Input class="sigInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Website}" class="sigLabel" />
-                        <Input
-                            class="sigInputText"
-                            placeholder="Enter {i18n>Website}"
-                            value="{oSupplierDetailModel>/vendorAddress/website}"
-                            maxLength="2048"
-                            change="oAddressChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <customData>
-                                <core:CustomData key="target" value="website" />
-                            </customData>
-                        </Input>
-                    </VBox>
-                    <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>Region}" class="sigLabel" />
-                        <ComboBox
-                            class="sigComboBox"
-                            width="100%"
-                            placeholder="Select {i18n>Region}"
-                            items="{oDropdownModel>/region}"
-                            selectedKey="{oSupplierDetailModel>/vendorAddress/region}"
-                            change="oRegionChange"
-                            enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                        >
-                            <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
-                        </ComboBox>
-                    </VBox>
-                </l:Grid>
-            </VBox>
-        </Panel>
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street3" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st4}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st4}"
+                                value="{oSupplierDetailModel>/vendorAddress/street4}"
+                                maxLength="40"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street4" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>st5}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>st5}"
+                                value="{oSupplierDetailModel>/vendorAddress/street5}"
+                                maxLength="40"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="street5" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>City}" class="sigLabel" required="true" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>City}"
+                                value="{oSupplierDetailModel>/vendorAddress/city}"
+                                maxLength="40"
+                                valueState="{oMandatoryModel>/vendorAddress/cityState}"
+                                valueStateText="{i18n>ManFields}"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                liveChange="onAddingmandvalue"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="city" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>Pincode}"
+                                value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
+                                liveChange="validatePostalCode"
+                                valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
+                                valueStateText="{i18n>ManFields}"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="cityPostalCode" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Country}" class="sigLabel" required="true" />
+                            <ComboBox
+                                class="voComboBox"
+                                width="100%"
+                                placeholder="Select {i18n>Country}"
+                                items="{oDropdownModel>/country}"
+                                change="onCountrySelect"
+                                selectedKey="{oSupplierDetailModel>/vendorAddress/countryKey}"
+                                valueState="{oMandatoryModel>/vendorAddress/countryKeyState}"
+                                valueStateText="{i18n>ManFields}"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                showSecondaryValues="true"
+                                selectionChange="onAddingmandvalue"
+                            >
+                                <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryKey}" additionalText="{oDropdownModel>countryName}" />
+                            </ComboBox>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>CompanyPhone}" class="sigLabel" required="true" />
+                            <HBox renderType="Bare">
+                                <ComboBox
+                                    class="voComboBox"
+                                    width="50%"
+                                    items="{oDropdownModel>/phoneCountryCode}"
+                                    showSecondaryValues="true"
+                                    change="onChangeCountryCode"
+                                    selectedKey="{oSupplierDetailModel>/countryCode}"
+                                    valueState="{oMandatoryModel>/phoneCountrycodeState}"
+                                    valueStateText="{i18n>ManFields}"
+                                    selectionChange="onAddingmandvalue"
+                                    enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                >
+                                    <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
+                                </ComboBox>
+                                <Input
+                                    class="voInputText"
+                                    placeholder="Enter {i18n>CompanyPhone}"
+                                    value="{oSupplierDetailModel>/mobileNumber}"
+                                    valueState="{oMandatoryModel>/mobileNumberState}"
+                                    valueStateText="{i18n>ManFields}"
+                                    liveChange="onPhoneNumberChange"
+                                    enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                                />
+                            </HBox>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Fax}" class="sigLabel" />
+                            <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Website}" class="sigLabel" />
+                            <Input
+                                class="voInputText"
+                                placeholder="Enter {i18n>Website}"
+                                value="{oSupplierDetailModel>/vendorAddress/website}"
+                                maxLength="2048"
+                                change="oAddressChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <customData>
+                                    <core:CustomData key="target" value="website" />
+                                </customData>
+                            </Input>
+                        </VBox>
+                        <VBox class="sapUiSmallMarginTop">
+                            <Label text="{i18n>Region}" class="sigLabel" />
+                            <ComboBox
+                                class="voComboBox"
+                                width="100%"
+                                placeholder="Select {i18n>Region}"
+                                items="{oDropdownModel>/region}"
+                                selectedKey="{oSupplierDetailModel>/vendorAddress/region}"
+                                change="oRegionChange"
+                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
+                            >
+                                <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
+                            </ComboBox>
+                        </VBox>
+                    </l:Grid>
+                </VBox>
+            </Panel>
+        </VBox>
+
         <CheckBox text="Company Location,  remit to Address(if different from Main Address)" />
-        <Panel expandable="true" headerText="Remittance Address" class="sapUiMediumMarginTop vendorRegistrationFormPanel">
+                <VBox class="vendorRegistrationFormSection sapUiMediumMarginTop">
+
+        <Panel expandable="true" headerText="Remittance Address" class=" vendorRegistrationFormPanel">
             <VBox>
                 <l:Grid defaultSpan="XL3 L3 M6 S12">
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st1}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st1}"
                             value="{oSupplierDetailModel>/vendorAddress/street}"
                             maxLength="60"
@@ -457,7 +465,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st2}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st2}"
                             value="{oSupplierDetailModel>/vendorAddress/street2}"
                             maxLength="40"
@@ -472,7 +480,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st3}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st3}"
                             value="{oSupplierDetailModel>/vendorAddress/street3}"
                             maxLength="40"
@@ -487,7 +495,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st4}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st4}"
                             value="{oSupplierDetailModel>/vendorAddress/street4}"
                             maxLength="40"
@@ -502,7 +510,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st5}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st5}"
                             value="{oSupplierDetailModel>/vendorAddress/street5}"
                             maxLength="40"
@@ -517,7 +525,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>City}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>City}"
                             value="{oSupplierDetailModel>/vendorAddress/city}"
                             maxLength="40"
@@ -535,7 +543,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Pincode}"
                             value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
                             liveChange="validatePostalCode"
@@ -551,7 +559,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Country}" class="sigLabel" required="true" />
                         <ComboBox
-                            class="sigComboBox"
+                            class="voComboBox"
                             width="100%"
                             placeholder="Select {i18n>Country}"
                             items="{oDropdownModel>/country}"
@@ -570,7 +578,7 @@
                         <Label text="{i18n>CompanyPhone}" class="sigLabel" required="true" />
                         <HBox renderType="Bare">
                             <ComboBox
-                                class="sigComboBox"
+                                class="voComboBox"
                                 width="50%"
                                 items="{oDropdownModel>/phoneCountryCode}"
                                 showSecondaryValues="true"
@@ -584,7 +592,7 @@
                                 <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                             </ComboBox>
                             <Input
-                                class="sigInputText"
+                                class="voInputText"
                                 placeholder="Enter {i18n>CompanyPhone}"
                                 value="{oSupplierDetailModel>/mobileNumber}"
                                 valueState="{oMandatoryModel>/mobileNumberState}"
@@ -596,12 +604,12 @@
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Fax}" class="sigLabel" />
-                        <Input class="sigInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
+                        <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Website}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Website}"
                             value="{oSupplierDetailModel>/vendorAddress/website}"
                             maxLength="2048"
@@ -616,7 +624,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Region}" class="sigLabel" />
                         <ComboBox
-                            class="sigComboBox"
+                            class="voComboBox"
                             width="100%"
                             placeholder="Select {i18n>Region}"
                             items="{oDropdownModel>/region}"
@@ -630,5 +638,6 @@
                 </l:Grid>
             </VBox>
         </Panel>
+        </VBox>
     </VBox>
 </core:FragmentDefinition>

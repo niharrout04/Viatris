@@ -7,7 +7,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st1}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st1}"
                             value="{oSupplierDetailModel>/vendorAddress/street}"
                             maxLength="60"
@@ -25,7 +25,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st2}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st2}"
                             value="{oSupplierDetailModel>/vendorAddress/street2}"
                             maxLength="40"
@@ -40,7 +40,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st3}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st3}"
                             value="{oSupplierDetailModel>/vendorAddress/street3}"
                             maxLength="40"
@@ -55,7 +55,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st4}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st4}"
                             value="{oSupplierDetailModel>/vendorAddress/street4}"
                             maxLength="40"
@@ -70,7 +70,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st5}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st5}"
                             value="{oSupplierDetailModel>/vendorAddress/street5}"
                             maxLength="40"
@@ -85,7 +85,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>City}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>City}"
                             value="{oSupplierDetailModel>/vendorAddress/city}"
                             maxLength="40"
@@ -103,7 +103,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Pincode}"
                             value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
                             liveChange="validatePostalCode"
@@ -152,7 +152,7 @@
                                 <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                             </ComboBox>
                             <Input
-                                class="sigInputText"
+                                class="voInputText"
                                 placeholder="Enter {i18n>CompanyPhone}"
                                 value="{oSupplierDetailModel>/mobileNumber}"
                                 valueState="{oMandatoryModel>/mobileNumberState}"
@@ -164,12 +164,12 @@
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Fax}" class="sigLabel" />
-                        <Input class="sigInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
+                        <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Website}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Website}"
                             value="{oSupplierDetailModel>/vendorAddress/website}"
                             maxLength="2048"
@@ -197,12 +197,12 @@
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Fax}" class="sigLabel" />
-                        <Input class="sigInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
+                        <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Website}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Website}"
                             value="{oSupplierDetailModel>/vendorAddress/website}"
                             maxLength="2048"
@@ -233,7 +233,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st4}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st4}"
                             value="{oSupplierDetailModel>/vendorAddress/street4}"
                             maxLength="40"
@@ -248,7 +248,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st5}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st5}"
                             value="{oSupplierDetailModel>/vendorAddress/street5}"
                             maxLength="40"
@@ -263,7 +263,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>City}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>City}"
                             value="{oSupplierDetailModel>/vendorAddress/city}"
                             maxLength="40"
@@ -281,7 +281,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Pincode}"
                             value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
                             liveChange="validatePostalCode"
@@ -330,7 +330,7 @@
                                 <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                             </ComboBox>
                             <Input
-                                class="sigInputText"
+                                class="voInputText"
                                 placeholder="Enter {i18n>CompanyPhone}"
                                 value="{oSupplierDetailModel>/mobileNumber}"
                                 valueState="{oMandatoryModel>/mobileNumberState}"
@@ -342,14 +342,14 @@
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Fax}" class="sigLabel" />
-                        <Input class="sigInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
+                        <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                     </VBox>
                 </l:Grid>
 				<l:Grid defaultSpan="XL3 L3 M6 S12">
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st4}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st4}"
                             value="{oSupplierDetailModel>/vendorAddress/street4}"
                             maxLength="40"
@@ -364,7 +364,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st5}" class="sigLabel" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>st5}"
                             value="{oSupplierDetailModel>/vendorAddress/street5}"
                             maxLength="40"
@@ -379,7 +379,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>City}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>City}"
                             value="{oSupplierDetailModel>/vendorAddress/city}"
                             maxLength="40"
@@ -397,7 +397,7 @@
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>Pincode}" class="sigLabel" required="true" />
                         <Input
-                            class="sigInputText"
+                            class="voInputText"
                             placeholder="Enter {i18n>Pincode}"
                             value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
                             liveChange="validatePostalCode"
