@@ -17,17 +17,17 @@
                         <core:Fragment fragmentName="viatrix.fragment.BankInformation" type="XML" />
                     </content>
                 </WizardStep>
-                <WizardStep title="Company Code Information">
+                <WizardStep id="companyId" title="Company Code Information">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.CompanyCodeInformation" type="XML" />
                     </content>
                 </WizardStep>
-                <WizardStep title="Purchasing Organisation Information">
+                <WizardStep id="purchasingId" title="Purchasing Organisation Information">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.PurchasingOrganisationInformation" type="XML" />
                     </content>
                 </WizardStep>
-                <WizardStep title="Documents and Attachments">
+                <WizardStep id="documentId" title="Documents and Attachments">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.DocumentAndAttachments" type="XML" />
                     </content>

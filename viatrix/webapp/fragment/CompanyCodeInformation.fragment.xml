@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
-    <!-- <VBox>
-        <Panel expandable="true" expanded="true" headerText="ACCOUNTING & CORRESPONDENCE DETAILS 1" class="sapUiMediumMarginTop vendorRegistrationFormPanel">
+    <VBox>
+        <Panel expandable="true" expanded="true" headerText="ACCOUNTING &amp; CORRESPONDENCE DETAILS 1" class="sapUiMediumMarginTop vendorRegistrationFormPanel">
             <VBox>
                 <l:Grid defaultSpan="XL3 L3 M6 S12">
                     <VBox class="sapUiSmallMarginTop">
@@ -345,7 +345,7 @@
                         <Input class="voInputText" placeholder="Enter {i18n>Fax}" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                     </VBox>
                 </l:Grid>
-				<l:Grid defaultSpan="XL3 L3 M6 S12">
+                <l:Grid defaultSpan="XL3 L3 M6 S12">
                     <VBox class="sapUiSmallMarginTop">
                         <Label text="{i18n>st4}" class="sigLabel" />
                         <Input
@@ -413,5 +413,5 @@
                 </l:Grid>
             </VBox>
         </Panel>
-    </VBox> -->
+    </VBox>
 </core:FragmentDefinition>
