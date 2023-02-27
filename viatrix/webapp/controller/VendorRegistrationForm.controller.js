@@ -10,7 +10,6 @@ sap.ui.define([
         return Controller.extend("viatrix.controller.VendorRegistrationForm", {
             onInit: function () {
 
-              
             }
         });
     });
