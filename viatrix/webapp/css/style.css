@@ -18,22 +18,30 @@
     font-family: Roboto, sans-serif, 'SAP-icons' !important;
 }
 
+/* Main header */
 .sapTntToolHeader.sapMTB {
     background: #F6F6F9 !important;
 }
 
+/* main page */
 .voPage {
     background-color: #FFF !important;
 }
 
+/* toolbar style */
 .voHideUnderline {
     border-bottom: 0px !important;
+}
+
+.voToolBarH5 {
+    height: 56px !important;
 }
 
 .voToolBarH3 {
     height: 2.5rem !important;
     background: transparent;
 }
+
 .voToolBarTable{
     height: 3.2rem !important;
     background: transparent;
@@ -45,27 +53,40 @@
     background: transparent;
     height: 2.5rem !important;
 }
+
+/* panel style */
 .sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb{
     border-bottom: none !important;
 }
+.sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
+   margin-top: 3px !important;
+}
+
+/* search filter background style */
 .voFilterBackground2 {
     background-color: #fefefe;
     border-radius: 0.3rem;
     box-shadow: 0px 0px 1px rgba(9, 30, 66, 0.31), 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 12px 12px #E1E1E1 !important;
 }
 
-.voToolBarH5 {
-    height: 56px !important;
-}
 
+/* Title style */
 .voTitle {
     color: #512D6D;
     font-weight: bold;
 }
 
+/* Label style */
 .voLabel {
     color: #1D1D1D;
 }
+
+/* Input style */
 
 .voInputText .sapMInputBaseContentWrapper {
     border-radius: 4px;
@@ -113,6 +134,8 @@
 .sapMInputBaseDisabled {
     opacity: 1;
 }
+ 
+/* combobox style */
 
 .voComboBox .sapMInputBaseContentWrapper {
     border-radius: 4px;
@@ -176,6 +199,7 @@
     color: black !important;
 }
 
+/* select style */
 .sapMSlt {
 
     border-radius: 4px !important;
@@ -213,6 +237,8 @@
     color: #FFFFFF;
 }
 
+/* Button emphasized style */
+
 .voBtnEmphasized span.sapMBtnInner {
     height: 2.1rem;
     font-weight: 500;
@@ -235,6 +261,7 @@
     border-color: #703E97;
 }
 
+/* Button default style */
 .voBtnDefault span.sapMBtnInner {
     height: 2.1rem;
     font-weight: 500;
@@ -254,21 +281,13 @@
     color: #703E97;
 }
 
+/* Global button */
 .sapMBtn {
     height: 40px !important;
 }
-.sapMActive{
-    border-color: none !important;
-}
 
-.sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
-    font-size: 1rem;
-    font-weight: 600;
-}
 
-.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
-   margin-top: 3px !important;
-}
+
 
 
 
