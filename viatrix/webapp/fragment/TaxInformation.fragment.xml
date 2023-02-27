@@ -1,8 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	<Dialog>
-		<content>
-           
-		</content>
-	</Dialog>
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+    <VBox>
+        <Label text="Tax Details" />
+        <VBox />
+        <l:Grid defaultSpan="XL3 L3 M6 S12" id="idSupDet22">
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax Number 1" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax number 2" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax number 3" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="tax Number 4" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax Number 5" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax Number Type" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax type" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Tax Juridiction" required="true" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="VAT Registration Number" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Transport Zone" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="POD Relevant" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Date of Birth" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Industry" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Vendor Calendar" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+        </l:Grid>
+    </VBox>
 </core:FragmentDefinition>
