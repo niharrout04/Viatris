@@ -9,7 +9,11 @@ sap.ui.define([
 
         return Controller.extend("viatrix.controller.VendorRegistration", {
             onInit: function () {
-
+                this.oComponent = this.getOwnerComponent();
+                this.router = this.getOwnerComponent().getRouter();
+            },
+            onCreatePOVendor(){
+                this.router.navTo("VendorRegistrationForm");
             }
         });
     });

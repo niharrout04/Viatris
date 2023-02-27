@@ -78,10 +78,17 @@
       },
       "routes": [
         {
-          "name": "RouteVendorRegistration",
+          "name": "VendorRegistration",
           "pattern": ":?query:",
           "target": [
             "TargetVendorRegistration"
+          ]
+        },
+        {
+          "name": "VendorRegistrationForm",
+          "pattern": "VendorRegistrationForm",
+          "target": [
+            "TargetVendorRegistrationForm"
           ]
         }
       ],
@@ -92,6 +99,13 @@
           "clearControlAggregation": false,
           "viewId": "VendorRegistration",
           "viewName": "VendorRegistration"
+        },
+        "TargetVendorRegistrationForm": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorRegistrationForm",
+          "viewName": "VendorRegistrationForm"
         }
       }
     },
