@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	<Dialog>
-		<content>
-           
-		</content>
-	</Dialog>
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+    <VBox>
+        <Label text="BANK DETAILS" />
+        <VBox />
+        <l:Grid defaultSpan="XL3 L3 M6 S12" id="idSupDet288">
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Country" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Bank Keys" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="bank Account Number" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Account Holder" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Bank Control Key" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="IBAN" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Partner Bank type" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Alternate Payee" required="true" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Instruction Key" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Swift/BIC" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Bank Name" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Bank Branch" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="Street" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+            <VBox class="sapUiSmallMarginTop">
+                <Label text="City" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+			<VBox class="sapUiSmallMarginTop">
+                <Label text="Region" class="sigLabel" />
+                <Input class="sigInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+            </VBox>
+        </l:Grid>
+    </VBox>
 </core:FragmentDefinition>
