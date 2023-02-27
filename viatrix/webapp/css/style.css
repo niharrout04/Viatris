@@ -34,6 +34,10 @@
     height: 2.5rem !important;
     background: transparent;
 }
+.voToolBarTable{
+    height: 3.2rem !important;
+    background: transparent;
+}
 
 .voToolBarlabel {
     padding-left: 0px !important;
