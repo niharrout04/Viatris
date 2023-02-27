@@ -1,7 +1,30 @@
 <mvc:View controllerName="viatrix.controller.App"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+    xmlns="sap.m" 
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt">
+    <tnt:ToolPage class="voToolPage">
+        <tnt:header>
+            <tnt:ToolHeader class = "votoolheader">
+                <Image src="images/Viatris.svg" class="sapUiTinyMarginTopBottom" press="onPressMenuNav" />
+                <ToolbarSpacer />
+                <Image src="images/Ellipse.svg" class="sapUiTinyMarginTopBottom" press="onPressLoggedinUser" />
+            </tnt:ToolHeader>
+        </tnt:header>
+        <!-- <tnt:sideContent>
+            <tnt:SideNavigation id="sideNavigation" selectedKey="{parts: ['oUserDetailModel>/UsersGroup'], formatter:'.formatter.setSelectedkey'}" itemSelect="onItemSelect" class="voSideNavigation">
+                <tnt:NavigationList class="voSideNavList">
+                    <tnt:NavigationListItem key="ListSupplierRegistration" text="{i18n>SupplierRegistration}" icon="{oAppModel>/navigationIconItems/SupplierRegistration}" class="voSideNavListItem" visible="{parts: ['oUserDetailModel>/UsersGroup'], formatter:'.formatter.setSupplierRegistrationVisibility'}"/>
+                    <tnt:NavigationListItem key="ListTaskbenchsupplier" text="{i18n>SupplierInbox}" icon="{oAppModel>/navigationIconItems/Supplierinbox}" class="voSideNavListItem" visible="{parts: ['oUserDetailModel>/UsersGroup'], formatter:'.formatter.setRegistrationVisibility'}"/>
+                    <tnt:NavigationListItem key="ListManageUser" text="{i18n>ManageUserWithSpace}" icon="{oAppModel>/navigationIconItems/ManageUser}" class="voSideNavListItem" visible="{parts: ['oUserDetailModel>/UsersGroup'], formatter:'.formatter.setManageUserVisibility'}" />
+                    <tnt:NavigationListItem key="ListTaskbench" text="{i18n>Taskbench}" icon="{oAppModel>/navigationIconItems/Taskbench}" class="voSideNavListItem" visible="{parts: ['oUserDetailModel>/UsersGroup'], formatter:'.formatter.setTaskbenchVisibility'}"/>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent> -->
+        <tnt:mainContents>
+            <NavContainer id="app" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
 </mvc:View>

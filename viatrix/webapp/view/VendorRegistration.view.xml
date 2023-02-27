@@ -1,7 +1,159 @@
-<mvc:View controllerName="viatrix.controller.VendorRegistration"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+<mvc:View controllerName="viatrix.controller.VendorRegistration" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f" xmlns:fm="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:tnt="sap.tnt">
+    <Page showHeader="false" enableScrolling="true" class="voPage">
+        <content>
+            <VBox>
+                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd sapUiSmallMarginTop">
+                    <ToolbarSpacer />
+                    <Button class="voBtnEmphasized" text="{i18n>CreatePOVendor}" press="onCreatePOVendor" type="Emphasized" />
+                    <Button class="voBtnDefault" text="{i18n>CreatenonPOVendor}" press="onCreatenonPOVendor" />
+                </Toolbar>
+                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd">
+                    <Title titleStyle="H3" text="{i18n>SearchExtVendor}" class="voTitle" />
+                    <ToolbarSpacer />
+                </Toolbar>
+                <Panel expandable="true" width="auto" class="sapUiResponsiveMargin voFilterBackground2">
+                    <headerToolbar class= "sapUiSmallMarginTop">
+                        <OverflowToolbar style="Clear">
+                            <Title text="Search" />
+                            <ToolbarSpacer />
+                            
+                        </OverflowToolbar>
+                    </headerToolbar>
+                    <content>
+                        <l:Grid defaultSpan="XL2 L2 M4 S6" id="idSearchFieldsForm1">
+                        <VBox>
+                            <Label text="{i18n>SearchTerm1}" class="voLabel" />
+                            <Input value="{oCommonModel>/SearchTerm1}" class="voInputText" placeholder="Enter {i18n>SearchTerm1}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>SearchTerm2}" class="voLabel" />
+                            <Input value="{oCommonModel>/SearchTerm2}" class="voInputText" placeholder="Enter {i18n>SearchTerm2}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>VendorName}" class="voLabel" />
+                            <Input value="{oCommonModel>/VendorName}" class="voInputText" placeholder="Enter {i18n>VendorName}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>Address}" class="voLabel" />
+                            <Input value="{oCommonModel>/Address}" class="voInputText" placeholder="Enter {i18n>Address}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>TaxNumber1}" class="voLabel" />
+                            <Input value="{oCommonModel>/TaxNumber1}" class="voInputText" placeholder="Enter {i18n>TaxNumber1}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>CountryCode}" class="voLabel" />
+                            <ComboBox value="{oCommonModel>/countryName}" class="voComboBox" showSecondaryValues="true" width="100%" placeholder="Select {i18n>CountryCode}" items="{oDropdownModel>/country}">
+                                <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryName}" additionalText="{oDropdownModel>countryKey}" />
+                            </ComboBox>
+                        </VBox>
+                    </l:Grid>
+                    <Toolbar class="voToolBarH3 voHideUnderline sapUiTinyMarginBottom">
+                        <ToolbarSpacer />
+                        <Button text="{i18n>Clear}" type="Default" class="voBtnDefault sapUiTinyMargin" press="onClearFilters" />
+                        <Button text="{i18n>Search}" type="Emphasized" class="voBtnEmphasized sapUiTinyMargin" press="onSearch" />
+                    </Toolbar>
+                    </content>
+                </Panel>
+                <!-- <VBox class="sapUiMediumMarginBeginEnd sapUiTinyMarginTop voFilterBackground2">
+                    <Toolbar class="voToolBarH3 voHideUnderline">
+                        <Title titleStyle="H5" text="{i18n>Search}" class="sapUiTinyMarginBegin voTitle" />
+                        <ToolbarSpacer />
+                    </Toolbar>
+                    <l:Grid defaultSpan="XL2 L2 M4 S6" id="idSearchFieldsForm">
+                        <VBox>
+                            <Label text="{i18n>SupplierName}" class="voLabel" />
+                            <Input value="{oCommonModel>/SupplierName}" class="voInputText" placeholder="Enter {i18n>SupplierName}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>SupplierName}" class="voLabel" />
+                            <Input value="{oCommonModel>/SupplierName}" class="voInputText" placeholder="Enter {i18n>SupplierName}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>SupplierName}" class="voLabel" />
+                            <Input value="{oCommonModel>/SupplierName}" class="voInputText" placeholder="Enter {i18n>SupplierName}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>PartnerNumber}" class="voLabel" />
+                            <Input value="{oCommonModel>/businessPartnerCode}" class="voInputText" placeholder="Enter {i18n>SupplierNumber}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>Country}" class="voLabel" />
+                            <ComboBox value="{oCommonModel>/countryName}" class="voComboBox" showSecondaryValues="true" width="100%" placeholder="Select {i18n>Country}" items="{oDropdownModel>/country}">
+                                <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryName}" additionalText="{oDropdownModel>countryKey}" />
+                            </ComboBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>Plant}" class="voLabel" />
+                            <ComboBox value="{oCommonModel>/plantName}" class="voComboBox" showSecondaryValues="true" width="100%" placeholder="Select {i18n>Plant}" items="{oDropdownModel>/plants}">
+                                <core:ListItem key="{oDropdownModel>plantId}" text="{oDropdownModel>plantName}" />
+                            </ComboBox>
+                        </VBox>
+                    </l:Grid>
+                    <Toolbar class="voToolBarH3 voHideUnderline sapUiTinyMarginBottom">
+                        <ToolbarSpacer />
+                        <Button text="{i18n>Clear}" type="Default" class="voBtnDefault sapUiTinyMargin" press="onClearFilters" />
+                        <Button text="{i18n>Search}" type="Emphasized" class="voBtnEmphasized sapUiTinyMargin" press="onSearch" />
+                    </Toolbar>
+                </VBox> -->
+
+                <!-- <Toolbar class="voHideUnderline voToolBarlabel sapUiSmallMargin">
+                    <ToolbarSpacer />
+                    <Button id="changeBtnId" class="voBtnEmphasized" text="{i18n>Change}" press="onChange" type="Emphasized" visible="false" />
+                    <Button id="extensionBtnId" class="voBtnEmphasized" text="{i18n>ExtendSupplier}" press="onExtension" type="Emphasized" visible="false" />
+                </Toolbar> -->
+            </VBox>
+            <VBox class="voFilterBackground sapUiMediumMarginBeginEnd">
+                <Table id="dunssearchtable" class="voTable" growing="true" growingThreshold="6" noDataText="{i18n>NoData}" visible="true" items="{oCommonModel>/Supplierinfo}">
+                    <columns>
+                        <Column width="12%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>VendorName}" />
+                        </Column>
+                        <Column width="12%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>VendorNumber}" />
+                        </Column>
+                        <Column width="12%" hAlign="Begin">
+                            <Text class="voTextH" text="{i18n>Street}" />
+                        </Column>
+                        <Column width="8%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>Postalcode}" />
+                        </Column>
+                        <Column width="8%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>City}" />
+                        </Column>
+                        <Column width="8%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>Country}" />
+                        </Column>
+                        <Column width="11%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>DUNS}" />
+                        </Column>
+                        <Column width="11%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>CompanyCode}" />
+                        </Column>
+                        <Column width="11%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>PurchasingOrg}" />
+                        </Column>
+                        <Column width="11%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>AccountGrp}" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem type="Active" press="onSelectsupplierinfo">
+                            <cells>
+                                <Text text="{oCommonModel>vendorName}" class="osrBlack" />
+                                <Text text="{oCommonModel>businessPartnerCode}" class="osrBlack SuppliercodeStyle" />
+                                <Text text="{oCommonModel>street}" class="osrBlack" />
+                                <Text text="{oCommonModel>cityPostalCode}" class="osrBlack" />
+                                <Text text="{oCommonModel>city}" class="osrBlack" />
+                                <Text text="{oCommonModel>countryName}" class="osrBlack" />
+                                <Text text="{oCommonModel>plantName}" class="osrBlack" />
+                                <Text text="{oCommonModel>companyCode}" class="osrBlack" />
+                                <Text text="{oCommonModel>purchasingOrg}" class="osrBlack" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
