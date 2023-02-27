@@ -265,3 +265,22 @@
 .sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
    margin-top: 3px !important;
 }
+
+
+
+/* Vendor Registration Form  */
+/* Panel  */
+.vendorRegistrationFormPanel .sapMPanelWrappingDiv .sapUiIcon {
+    right: 0;
+}
+
+/* section  */
+.vendorRegistrationFormSection {
+    background: rgba(249, 249, 249, 0.8);
+    border-radius: 8px;
+}
+
+/* Wizard  */
+.sapMWizardStepTitle {
+    display: none;
+}
