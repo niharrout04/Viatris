@@ -1,1 +1,267 @@
 /* Enter your custom styles here */
+/* :root {
+    --root-color: 112, 62, 151;
+    Set from user theme settings
+    --primary-color: rgba(var(--root-color), 1);
+    --primary-Text-Color: #ffffff;
+    --secondary-Text-Color: #000000;
+    --page-background-color: #ffffff;
+    --secondary-background-color: #F3F2F1;
+    --hover-background-color: rgba(var(--root-color), 0.1);
+    --transparent-button-background: rgba(var(--root-color), 0.12);
+    --font: "Roboto";
+    Segoe UI
+} */
+
+/* Global Style */
+* {
+    font-family: Roboto, sans-serif, 'SAP-icons' !important;
+}
+
+.sapTntToolHeader.sapMTB {
+    background: #F6F6F9 !important;
+}
+
+.voPage {
+    background-color: #FFF !important;
+}
+
+.voHideUnderline {
+    border-bottom: 0px !important;
+}
+
+.voToolBarH3 {
+    height: 2.5rem !important;
+    background: transparent;
+}
+
+.voToolBarlabel {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background: transparent;
+    height: 2.5rem !important;
+}
+.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb{
+    border-bottom: none !important;
+}
+.voFilterBackground2 {
+    background-color: #fefefe;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 1px rgba(9, 30, 66, 0.31), 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 12px 12px #E1E1E1 !important;
+}
+
+.voToolBarH5 {
+    height: 56px !important;
+}
+
+.voTitle {
+    color: #512D6D;
+    font-weight: bold;
+}
+
+.voLabel {
+    color: #1D1D1D;
+}
+
+.voInputText .sapMInputBaseContentWrapper {
+    border-radius: 4px;
+    height: 2.1rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 0;
+    background: none;
+    background-color: #fff;
+    border: 1px solid #BDBDBD;
+    position: relative;
+    overflow: hidden;
+}
+
+.voInputText .sapMInputBaseContentWrapper:focus {
+    border-radius: 4px;
+    height: 2.1rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 0;
+    background: none;
+    background-color: #fff;
+    border: 0.125rem solid #512D6D !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.voInputText .sapMInputBaseContentWrapperError {
+    border-radius: 4px;
+    height: 2.1rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 0;
+    background: none;
+    background-color: #fff;
+    border: 0.13rem solid #B3261E;
+    position: relative;
+    overflow: hidden;
+}
+
+.voInputText.sapMInputBaseDisabled .sapMInputBaseContentWrapper {
+    background-color: #f2f3f3;
+}
+
+.sapMInputBaseDisabled {
+    opacity: 1;
+}
+
+.voComboBox .sapMInputBaseContentWrapper {
+    border-radius: 4px;
+    height: 2.1rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 0;
+    background: none;
+    background-color: #fff;
+    border: 1px solid #BDBDBD;
+    position: relative;
+    overflow: hidden;
+}
+
+.voComboBox .sapMInputBaseContentWrapperError {
+    border-radius: 4px;
+    height: 2.1rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 0;
+    background: none;
+    background-color: #fff;
+    border: 0.13rem solid #B3261E;
+    position: relative;
+    overflow: hidden;
+}
+
+.voComboBox.sapMInputBaseDisabled .sapMInputBaseContentWrapper {
+    background-color: #f2f3f3;
+}
+
+.voComboBox .sapMInputBaseIconContainer .sapMInputBaseIcon {
+    height: 2.1rem !important;
+    ;
+}
+
+.voComboBox .sapMInputBaseIcon {
+    line-height: 2.1rem !important;
+    color: #3d3d3e !important;
+}
+
+.sapMInputBaseIconPressed .sapMInputBaseIcon,
+.sapMInputBaseIconPressed .sapMInputBaseIcon:hover {
+    background: #512D6D !important;
+}
+
+.sapMInputBaseIconPressed .sapMInputBaseIcon::before {
+    color: #fff;
+}
+
+.sapMInputFocused .sapMFocus .sapMInputBaseContentWrapper {
+    border-width: 2px !important;
+}
+
+.sapMInputBase {
+    line-height: 1rem;
+    height: 2.1rem !important;
+}
+
+.sapMInputBaseIcon:hover {
+    color: black !important;
+}
+
+.sapMSlt {
+
+    border-radius: 4px !important;
+
+    height: 2.1rem !important;
+
+    box-sizing: border-box !important;
+
+    vertical-align: middle !important;
+
+    background: none !important;
+
+    background-color: #fff !important;
+
+    border: 0.0625rem solid #89919a !important;
+
+    position: relative !important;
+
+    overflow: hidden !important;
+
+}
+
+.sapMSltArrow {
+    height: 1.7rem !important;
+    margin: 2px 2px 2px 2px !important;
+}
+
+.sapMSltPressed>.sapMSltArrow {
+    background-color: #703E97 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+.sapMSlt:not(.sapMSltState).sapMSltPressed>.sapMSltArrow::before {
+    color: #FFFFFF;
+}
+
+.voBtnEmphasized span.sapMBtnInner {
+    height: 2.1rem;
+    font-weight: 500;
+    align-content: center;
+    background-color: #703E97;
+    border-color: #703E97;
+    border-radius: 4px;
+}
+
+.voBtnEmphasized span.sapMBtnInner .sapUiIcon {
+    line-height: 1.8rem;
+}
+
+.voBtnEmphasized .sapMBtnContent {
+    line-height: 1.8rem !important;
+}
+
+.voBtnEmphasized:hover>.sapMBtnHoverable.sapMBtnEmphasized:not(.sapMBtnActive):not(.sapMToggleBtnPressed) {
+    background-color: #703E97;
+    border-color: #703E97;
+}
+
+.voBtnDefault span.sapMBtnInner {
+    height: 2.1rem;
+    font-weight: 500;
+    align-content: center;
+    border-color: #703E97 !important;
+    border-radius: 4px;
+    background-color: #fefefe;
+}
+
+.voBtnDefault span.sapMBtnInner .sapUiIcon {
+    line-height: 1.8rem;
+    color: #703E97 !important;
+}
+
+.voBtnDefault .sapMBtnContent {
+    line-height: 1.8rem !important;
+    color: #703E97;
+}
+
+.sapMBtn {
+    height: 40px !important;
+}
+.sapMActive{
+    border-color: none !important;
+}
+
+.sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
+   margin-top: 3px !important;
+}
