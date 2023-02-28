@@ -1,8 +1,8 @@
 <mvc:View controllerName="viatrix.controller.VendorRegistrationForm" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" showHeader="false">
         <content>
-            <Wizard id="supplierdetailId" renderMode="Page" showNextButton="true" class="sigWizard" navigationChange="handleNavigationChange">
-                <WizardStep id="companyinfoID" class="sigWizardstep" title="General Information" validated="true">
+            <Wizard id="supplierdetailId" renderMode="Page" showNextButton="true" class="voWizard" navigationChange="handleNavigationChange">
+                <WizardStep id="companyinfoID" class="voWizardstep" title="General Information" validated="true">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.GeneralInformation" type="XML" />
                     </content>
@@ -17,17 +17,17 @@
                         <core:Fragment fragmentName="viatrix.fragment.BankInformation" type="XML" />
                     </content>
                 </WizardStep>
-                <WizardStep title="Company Code Information">
+                <WizardStep id="companyId" title="Company Code Information">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.CompanyCodeInformation" type="XML" />
                     </content>
                 </WizardStep>
-                <WizardStep title="Purchasing Organisation Information">
+                <WizardStep id="purchasingId" title="Purchasing Organisation Information">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.PurchasingOrganisationInformation" type="XML" />
                     </content>
                 </WizardStep>
-                <WizardStep title="Documents and Attachments">
+                <WizardStep id="documentId" title="Documents and Attachments">
                     <content>
                         <core:Fragment fragmentName="viatrix.fragment.DocumentAndAttachments" type="XML" />
                     </content>
