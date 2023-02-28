@@ -90,6 +90,13 @@
           "target": [
             "TargetVendorRegistrationForm"
           ]
+        },
+        {
+          "name": "VendorDetails",
+          "pattern": "VendorDetails",
+          "target": [
+            "TargetVendorDetails"
+          ]
         }
       ],
       "targets": {
@@ -106,6 +113,13 @@
           "clearControlAggregation": false,
           "viewId": "VendorRegistrationForm",
           "viewName": "VendorRegistrationForm"
+        },
+        "TargetVendorDetails": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorDetails",
+          "viewName": "VendorDetails"
         }
       }
     },

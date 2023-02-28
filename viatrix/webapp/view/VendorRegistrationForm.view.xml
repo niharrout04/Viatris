@@ -1,38 +1,45 @@
 <mvc:View controllerName="viatrix.controller.VendorRegistrationForm" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
-    <Page id="page" showHeader="false">
+    <Page id="page" showHeader="false" class="voPage">
         <content>
-            <Wizard id="supplierdetailId" renderMode="Page" showNextButton="true" class="voWizard" navigationChange="handleNavigationChange">
-                <WizardStep id="companyinfoID" class="voWizardstep" title="General Information" validated="true">
-                    <content>
-                        <core:Fragment fragmentName="viatrix.fragment.GeneralInformation" type="XML" />
-                    </content>
-                </WizardStep>
-                <WizardStep id="banktaxId" class="sigWizardstep" title="Tax Information" validated="true">
-                    <content>
-                        <core:Fragment fragmentName="viatrix.fragment.TaxInformation" type="XML" />
-                    </content>
-                </WizardStep>
-                <WizardStep id="contactId" class="sigWizardstep" title="Bank Information" validated="true">
-                    <content>
-                        <core:Fragment fragmentName="viatrix.fragment.BankInformation" type="XML" />
-                    </content>
-                </WizardStep>
-                <WizardStep id="companyId" title="Company Code Information">
-                    <content>
-                        <core:Fragment fragmentName="viatrix.fragment.CompanyCodeInformation" type="XML" />
-                    </content>
-                </WizardStep>
-                <WizardStep id="purchasingId" title="Purchasing Organisation Information">
-                    <content>
-                        <core:Fragment fragmentName="viatrix.fragment.PurchasingOrganisationInformation" type="XML" />
-                    </content>
-                </WizardStep>
-                <WizardStep id="documentId" title="Documents and Attachments">
-                    <content>
-                        <core:Fragment fragmentName="viatrix.fragment.DocumentAndAttachments" type="XML" />
-                    </content>
-                </WizardStep>
-            </Wizard>
+            <VBox>
+                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd sapUiLargeMarginTop">
+                    <Title titleStyle="H3" text="Vendor Registration Form" class="voTitle" />
+                    <ToolbarSpacer />
+                </Toolbar>
+                <Wizard id="supplierdetailId" renderMode="Page" showNextButton="true" class="voWizard" navigationChange="handleNavigationChange">
+                    <WizardStep id="companyinfoID" class="voWizardstep" title="General Information" validated="true">
+                        <content>
+                            <core:Fragment fragmentName="viatrix.fragment.GeneralInformation" type="XML" />
+                        </content>
+                    </WizardStep>
+                    <WizardStep id="banktaxId" class="voWizardstep" title="Tax Information" validated="true">
+                        <content>
+                            <core:Fragment fragmentName="viatrix.fragment.TaxInformation" type="XML" />
+                        </content>
+                    </WizardStep>
+                    <WizardStep id="contactId" class="voWizardstep" title="Bank Information" validated="true">
+                        <content>
+                            <core:Fragment fragmentName="viatrix.fragment.BankInformation" type="XML" />
+                        </content>
+                    </WizardStep>
+                    <WizardStep id="companyId" class="voWizardstep" title="Company Code Information">
+                        <content>
+                            <core:Fragment fragmentName="viatrix.fragment.CompanyCodeInformation" type="XML" />
+                        </content>
+                    </WizardStep>
+                    <WizardStep id="purchasingId" class="voWizardstep" title="Purchasing Organisation Information">
+                        <content>
+                            <core:Fragment fragmentName="viatrix.fragment.PurchasingOrganisationInformation" type="XML" />
+                        </content>
+                    </WizardStep>
+                    <WizardStep id="documentId" class="voWizardstep" title="Documents and Attachments">
+                        <content>
+                            <core:Fragment fragmentName="viatrix.fragment.DocumentAndAttachments" type="XML" />
+                        </content>
+                    </WizardStep>
+                </Wizard>
+                <Button press="onTestNavigate" />
+            </VBox>
         </content>
     </Page>
 </mvc:View>
