@@ -16,7 +16,7 @@ sap.ui.define([
                 console.log("history- "+history.aHistory);
             },
             onTestNavigate: function(){
-                this.router.navTo("VendorDetails");
+                this.router.navTo("TaskDetails");
             }
         });
     });

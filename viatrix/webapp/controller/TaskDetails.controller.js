@@ -8,7 +8,7 @@ sap.ui.define([
     function (Controller,History) {
         "use strict";
 
-        return Controller.extend("viatrix.controller.VendorDetails", {
+        return Controller.extend("viatrix.controller.TaskDetails", {
             onInit: function () {
                 // this.oComponent = this.getOwnerComponent();
                 // this.router = this.getOwnerComponent().getRouter();
