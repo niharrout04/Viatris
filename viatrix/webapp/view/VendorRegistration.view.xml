@@ -11,14 +11,14 @@
                     <Title titleStyle="H3" text="{i18n>SearchExtVendor}" class="voTitle" />
                     <ToolbarSpacer />
                 </Toolbar>
-                <Panel expandable="true" width="auto" class="sapUiResponsiveMargin voFilterBackground2">
-                    <headerToolbar class= "sapUiSmallMarginTop">
+                <Panel expandable="true" width="auto" headerText="Search" class="sapUiResponsiveMargin voFilterBackground2 voSearchPanel">
+                    <!-- <headerToolbar class= "sapUiSmallMarginTop">
                         <OverflowToolbar style="Clear">
                             <Title text="Search" />
                             <ToolbarSpacer />
                             
                         </OverflowToolbar>
-                    </headerToolbar>
+                    </headerToolbar> -->
                     <content>
                         <l:Grid defaultSpan="XL2 L2 M4 S6" id="idSearchFieldsForm1">
                         <VBox>
