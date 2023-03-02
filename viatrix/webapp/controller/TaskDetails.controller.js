@@ -8,15 +8,15 @@ sap.ui.define([
     function (Controller,History) {
         "use strict";
 
-        return Controller.extend("viatrix.controller.VendorRegistrationForm", {
+        return Controller.extend("viatrix.controller.TaskDetails", {
             onInit: function () {
-                this.oComponent = this.getOwnerComponent();
-                this.router = this.getOwnerComponent().getRouter();
+                // this.oComponent = this.getOwnerComponent();
+                // this.router = this.getOwnerComponent().getRouter();
                 var history= History.getInstance();
-                console.log("history- "+history.aHistory);
+                console.log("history- "+history);
             },
             onTestNavigate: function(){
-                this.router.navTo("TaskDetails");
+                // this.router.navTo("VendorDetails");
             }
         });
     });

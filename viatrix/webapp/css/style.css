@@ -354,8 +354,28 @@
     background: rgba(249, 249, 249, 0.8);
     border-radius: 8px;
 }
+.vendorRegistrationFormSectionLabel {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.0025em;
+    color: #512D6D;
+}
+.voGridLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.0025em;
+    color: #1D1D1D;
+}
 
 /* Wizard  */
+.sapMWizard .sapMWizardStepContainer {
+    margin-top: 6rem;
+}
+.sapMWizardProgressNav{
+    height: 6rem;
+}
 .voWizardstep .sapMWizardStepTitle {
     display: none;
 }
@@ -365,7 +385,9 @@
 .voWizard .sapMWizardProgressNav {
     z-index: 0;
 }
-
+.sapMWizardProgressNavStep::after {
+    display: none;
+}
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep .sapMWizardProgressNavStepCircle {
     border-color: #E0E0E0;
     background: #F2F2F2;
@@ -422,7 +444,7 @@
     width: 400%;
     border-top-left-radius: 0.125rem;
     border-top-right-radius: 0.125rem;
-    bottom: -0.3rem;
+    bottom: -2.3rem;
 }
 
 .sapMWizardProgressNavStep::after {
@@ -446,3 +468,44 @@
     width: 80%;
     bottom: -0.75rem; */
 /* } */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* white background css  */
+.whiteBg{
+    background-color: white;
+}

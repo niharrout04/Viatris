@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
-    <VBox>
-        <Panel expandable="true" expanded="true" headerText="PURCHASING DETAILS 1" class="sapUiMediumMarginTop vendorRegistrationFormPanel">
+    <VBox class="vendorRegistrationFormSection" >
+        <Panel expandable="true" expanded="true" headerText="PURCHASING DETAILS 1" class="vendorRegistrationFormPanel">
             <VBox>
                 <l:Grid defaultSpan="XL3 L3 M6 S12">
                     <VBox class="sapUiSmallMarginTop">
