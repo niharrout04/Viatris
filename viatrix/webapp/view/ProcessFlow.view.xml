@@ -1,0 +1,79 @@
+<mvc:View controllerName="viatrix.controller.VendorRegistration" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f" xmlns:fm="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:tnt="sap.tnt">
+    <Page showHeader="false" enableScrolling="true" class="voPage">
+        <content>
+            <VBox>
+                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd sapUiSmallMarginTop">
+                    <ToolbarSpacer />
+                   
+                </Toolbar>
+                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd">
+                    <Title titleStyle="H3" text="{i18n>VendorRequest}" class="voTitle" />
+                    <ToolbarSpacer />
+                </Toolbar>
+                <Panel expandable="true" width="auto"  headerText="Filter" class="sapUiResponsiveMargin voFilterBackground2 voSearchPanel">
+                    <content>
+                        <l:Grid defaultSpan="XL3 L3 M6 S12" id="idSearchFieldsForm1">
+                        <VBox>
+                            <Label text="{i18n>ReqID}" class="voLabel" />
+                            <Input value="{oCommonModel>/ReqID}" class="voInputText" placeholder="Enter {i18n>ReqID}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>CreateDate}" class="voLabel" />
+                            <Input value="{oCommonModel>/CreateDate}" class="voInputText" placeholder="Enter {i18n>CreateDate}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>CreateBy}" class="voLabel" />
+                            <Input value="{oCommonModel>/CreateBy}" class="voInputText" placeholder="Enter {i18n>CreateBy}" />
+                        </VBox>
+                        <VBox>
+                            <Label text="{i18n>Status}" class="voLabel" />
+                            <ComboBox value="{oCommonModel>/Status}" class="voComboBox" showSecondaryValues="true" width="100%" placeholder="Select {i18n>Status}" items="{oDropdownModel>/country}">
+                                <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryName}" additionalText="{oDropdownModel>countryKey}" />
+                            </ComboBox>
+                        </VBox>
+                    </l:Grid>
+                    <Toolbar class="voToolBarH3 voHideUnderline sapUiTinyMargin">
+                        <ToolbarSpacer />
+                        <Button text="{i18n>Clear}" type="Default" class="voBtnDefault sapUiTinyMargin" press="onClearFilters" />
+                        <Button text="{i18n>Search}" type="Emphasized" class="voBtnEmphasized sapUiTinyMargin" press="onSearch" />
+                    </Toolbar>
+                    </content>
+                </Panel>
+            </VBox>
+            <VBox class="voFilterBackground sapUiMediumMarginBeginEnd">
+            <Toolbar class="voToolBarH3 voHideUnderline sapUiTinyMarginBottom">
+            <Title text = "Vendor Request List (0)" titleStyle="H5" class="votitleblack"/>
+            </Toolbar>
+                <Table id="dunssearchtable" class="voTable" growing="true" growingThreshold="6" noDataText="{i18n>NoData}" visible="true" items="{oCommonModel>/Supplierinfo}">
+                    <columns>
+                        <Column width="25%" hAlign="Begin">
+                            <Text class="voTextH" text="{i18n>ReqID}" />
+                        </Column>
+                        <Column width="25%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>CreateDate}" />
+                        </Column>
+                        <Column width="25%" hAlign="Center">
+                            <Text class="voTextH" text="{i18n>CreateBy}" />
+                        </Column>
+                        <Column width="25%" hAlign="Begin">
+                            <Text class="voTextH" text="{i18n>Status}" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem type="Active" press="onSelectsupplierinfo">
+                            <cells>
+                                <Text text="{oCommonModel>vendorName}" class="osrBlack" />
+                                <Text text="{oCommonModel>businessPartnerCode}" class="osrBlack SuppliercodeStyle" />
+                                <Text text="{oCommonModel>street}" class="osrBlack" />
+                               <HBox justifyContent="SpaceBetween">
+                               <Text text="{oCommonModel>street}" class="osrBlack" />
+                               <Button icon="sap-icon://slim-arrow-right"/>
+                               </HBox>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

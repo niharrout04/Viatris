@@ -55,6 +55,10 @@
 }
 
 /* panel style */
+.sapMPanelHdr{
+    color: #1D1D1D !important;
+    font-weight: 600 !important;
+}
 .sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb{
     border-bottom: none !important;
 }
@@ -66,6 +70,18 @@
 .sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
    margin-top: 3px !important;
 }
+.sapMPanel .sapMPanelWrappingDiv .sapMPanelHdr, .sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB {
+    margin-left: 4.2rem;
+}
+.sapMPanelWrappingDiv .sapUiIcon {
+    background: #FFFFFF;
+    border: 1px solid #703E97;
+    width: 12px !important;
+    height: 12px;
+    color: #757575;
+    margin-left: 2rem;
+}
+
 
 /* search filter background style */
 .voFilterBackground2 {
@@ -431,6 +447,27 @@
     bottom: -2.3rem;
 }
 
+.sapMWizardProgressNavStep::after {
+    content: "";
+    display: contents;
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    right: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    z-index: -1;
+}
+
+/* .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepContainer::after {
+    /* height: 0; */
+    /* height: 0.75rem !important;
+    background: #512D6D;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+    width: 80%;
+    bottom: -0.75rem; */
+/* } */ 
 
 /* Task Detail  */
 .taskDetailHbox {
