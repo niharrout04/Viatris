@@ -431,16 +431,123 @@
     bottom: -2.3rem;
 }
 
-/* .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepContainer::after {
-    /* height: 0; */
-    /* height: 0.75rem !important;
-    background: #512D6D;
-    border-top-left-radius: 0.125rem;
-    border-top-right-radius: 0.125rem;
-    width: 80%;
-    bottom: -0.75rem; */
-/* } */ 
 
+/* Task Detail  */
+.taskDetailHbox {
+    margin: 32px;
+    border: 1px solid #E0E0E0;
+    display: flex;
+}
+.taskDetailsVbox1{
+    flex: 3;
+}
+.taskDetailsVbox2{
+    flex: 1.2;
+}
+.newVendorApplicationApproval {
+    border-right: 1px solid #E0E0E0;
+}
+.taskDetailTitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #1D1D1D;
+}
+.taskDetailButtonViewDetail{
+    width: 109px;
+}
+.taskDetailButtonViewDetail .sapMBtnInner {
+    background-color: #E2D8EA;
+    border-radius: 16px;
+    border: 0;
+    padding: 4px 16px;
+    height: 32px !important;
+}
+.taskDetailButtonViewDetail .sapMBtnContent {
+    font-weight: 400;
+    color: #512D6D;
+}
+.taskDetailButtonViewDetail :not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
+    background-color: yellow;
+}
+.newVendorApplicationApprovalVBox1 {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 16px;
+    padding-left: 32px;
+}
+.newVendorApplicationApprovalVBox2 {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 16px;
+
+}
+.newVendorApplicationApprovalVBox3 {
+    padding: 16px;
+}
+.taskDetailAvatarVbox{
+    padding: 8px;
+}
+.taskDetailAvatarTitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #424242;
+}
+.taskDetailAvatarTimestamp {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #757575;
+}
+.taskDetailFormLabel {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #757575;
+}
+.taskDetailFormText {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #424242;
+}
+.taskDetailSubTitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0015em;
+    color: #1D1D1D;
+}
+.taskDetailLabelOnboardingDetail {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #1D1D1D;
+}
+
+.taskDetailLabel {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #424242;
+}
+ /* Activity Log  */
+ .wbProcessFlowBarAudit {
+    height: 100%;
+    border-left: 3px solid #E0E0E0;
+    margin-top: 3px;
+}
 
 
 
