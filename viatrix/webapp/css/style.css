@@ -458,17 +458,19 @@
     border-bottom-style: solid;
     z-index: -1;
 }
-
-.sapMWizardProgressNavList, .sapMWizardProgressNavListVarying {
-    display: block !important;
-    table-layout: fixed;
-    position: relative;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 3rem;
+.sapMWizardProgressNavStepTitle {
+    overflow: hidden;
+    max-width: 80% !important;
+    max-height: 2.875rem;
+    line-height: 1rem;
+    font-size: .875rem;
+    color: #1d2d3e;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
+
 /* .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepContainer::after {
     /* height: 0; */
     /* height: 0.75rem !important;
