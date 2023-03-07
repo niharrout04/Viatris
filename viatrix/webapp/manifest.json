@@ -57,6 +57,12 @@
         "settings": {
           "bundleName": "viatrix.i18n.i18n"
         }
+      },
+      "oActivityLog": {
+          "type": "sap.ui.model.json.JSONModel",
+          "settings": {
+              "defaultBindingMode": "TwoWay"
+          }
       }
     },
     "resources": {
@@ -92,10 +98,10 @@
           ]
         },
         {
-          "name": "VendorDetails",
-          "pattern": "VendorDetails",
+          "name": "TaskDetails",
+          "pattern": "TaskDetails",
           "target": [
-            "TargetVendorDetails"
+            "TargetTaskDetails"
           ]
         }
       ],
@@ -114,12 +120,12 @@
           "viewId": "VendorRegistrationForm",
           "viewName": "VendorRegistrationForm"
         },
-        "TargetVendorDetails": {
+        "TargetTaskDetails": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "VendorDetails",
-          "viewName": "VendorDetails"
+          "viewId": "TaskDetails",
+          "viewName": "TaskDetails"
         }
       }
     },

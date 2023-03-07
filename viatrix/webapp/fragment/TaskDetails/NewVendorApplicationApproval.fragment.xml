@@ -1,3 +1,108 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
-   <Label text="New Vendor Application Approval" />
+    <VBox class="newVendorApplicationApproval">
+        <VBox class="newVendorApplicationApprovalVBox1">
+            <HBox justifyContent="SpaceBetween">
+                <Label text="New Vendor Application Approval" class="taskDetailTitle" />
+                <Button text="View Details" class="taskDetailButtonViewDetail" />
+            </HBox>
+            <HBox>
+                <VBox class="taskDetailAvatarVbox">
+                    <Image src="images/Ellipse.svg" width="48px" class="sapUiTinyMarginTopBottom" press="onPressLoggedinUser" />
+                </VBox>
+                <VBox class="taskDetailAvatarVbox">
+                    <Label text="William H." class="taskDetailAvatarTitle sapUiSmallMarginTop" />
+                    <Label text="To : Eric Tran" class="taskDetailAvatarTitle" />
+                    <Label text="Thu 9/29/2022 2:30 PM" class="taskDetailAvatarTimestamp sapUiSmallMarginTop" />
+                </VBox>
+            </HBox>
+            <Label text="Need to take action on an assignment for the New Vendor Application approval" class="taskDetailLabel sapUiSmallMarginTop" />
+            <Label text="Thanks" class="taskDetailLabel sapUiSmallMarginTop" />
+            <Label text="Onboarding Details" class="taskDetailLabelOnboardingDetail sapUiMediumMarginTop" />
+        </VBox>
+        <VBox class="newVendorApplicationApprovalVBox2">
+            <Label text="General Information" class="taskDetailSubTitle sapUiSmallMarginBegin" />
+            <VBox>
+                <!-- <l:Grid defaultSpan="XL3 L3 M6 S12"> -->
+                <HBox class="sapUiSmallMarginBegin">
+                    <VBox class="sapUiSmallMarginTop">
+                        <Label text="Vendor Account Group" class="taskDetailFormLabel" required="true" />
+                        <Text class="taskDetailFormText" text="0001" />
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin ">
+                        <Label text="Name 1" class="taskDetailFormLabel" />
+                        <Text class="taskDetailFormText" text="AMCOR RIGID PLASTICS USA LLC" />
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                        <Label text="Name 2" class="taskDetailFormLabel" />
+                        <Text class="taskDetailFormText" text="PACKAGING USA INC" />
+                    </VBox>
+                </HBox>
+                <!-- </l:Grid> -->
+                <!-- <l:Grid defaultSpan="XL3 L3 M6 S12"> -->
+                <HBox class="sapUiSmallMarginBegin sapUiSmallMarginTop">
+                    <VBox class="sapUiSmallMarginTop">
+                        <Label text="Street" class="taskDetailFormLabel" />
+                        <Text class="taskDetailFormText" text="Cook Road Suit 120" />
+                        
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                        <Label text="Postal Code" class="taskDetailFormLabel" />
+                        <Text class="taskDetailFormText" text="60089" />
+                        
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                        <Label text="City" class="taskDetailFormLabel" required="true" />
+                        <Text class="taskDetailFormText" text="Buffalo Grove" />
+                        
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                        <Label text="Region" class="taskDetailFormLabel" required="true" />
+                        <Text class="taskDetailFormText" text="IL" />
+                        
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                        <Label text="Country" class="taskDetailFormLabel" required="true" />
+                        <Text class="taskDetailFormText" text="USA" />
+                        
+                    </VBox>
+                </HBox>
+                <!-- </l:Grid> -->
+                <!-- <l:Grid defaultSpan="XL3 L3 M6 S12"> -->
+                <HBox class="sapUiSmallMarginBegin sapUiSmallMarginTop">
+                    <VBox class="sapUiSmallMarginTop">
+                        <Label text="Language" class="taskDetailFormLabel" required="true" />
+                        <Text class="taskDetailFormText" text="EN" />
+                    </VBox>
+                    <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                        <Label text="First Telephone Number" class="taskDetailFormLabel" required="true" />
+                        <Text class="taskDetailFormText" text="800-447-0049" />
+                    </VBox>
+                </HBox>
+                <!-- </l:Grid> -->
+            </VBox>
+        </VBox>
+        <VBox class="newVendorApplicationApprovalVBox3">
+            <Label text="Payment" class="taskDetailSubTitle sapUiSmallMarginBegin" />
+            <!-- <l:Grid defaultSpan="XL3 L3 M6 S12"> -->
+            <HBox class="sapUiSmallMarginBegin">
+                <VBox class="sapUiSmallMarginTop">
+                    <Label text="Payment Terms" class="taskDetailFormLabel" />
+                    <Text class="taskDetailFormText" text="30 DAYS NET" />
+                </VBox>
+                <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                    <Label text="Currency" class="taskDetailFormLabel" />
+                    <Text class="taskDetailFormText" text="USD" />
+                </VBox>
+                <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                    <Label text="Incoterm" class="taskDetailFormLabel" required="true" />
+                    <Text class="taskDetailFormText" text="FOB" />
+                </VBox>
+                <VBox class="sapUiSmallMarginTop sapUiLargeMarginBegin">
+                    <Label text="Incoterms Name Location" class="taskDetailFormLabel" required="true" />
+                    <Text class="taskDetailFormText" text="ORIG" />
+                </VBox>
+            </HBox>
+            <!-- </l:Grid> -->
+        </VBox>
+    </VBox>
 </core:FragmentDefinition>
