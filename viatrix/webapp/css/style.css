@@ -459,6 +459,16 @@
     z-index: -1;
 }
 
+.sapMWizardProgressNavList, .sapMWizardProgressNavListVarying {
+    display: block !important;
+    table-layout: fixed;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 3rem;
+}
 /* .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepContainer::after {
     /* height: 0; */
     /* height: 0.75rem !important;
