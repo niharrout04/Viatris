@@ -1,24 +1,21 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
     <VBox class="activityLog">
         <Label text="Activity Log" class="taskDetailTitle" />
-        <VBox class="wbOverflowVertical sapUiTinyMarginTopBottom" items="{oActivityLog>/testDataActivityLog}">
+        <VBox class="activitylogTasks sapUiLargeMarginTop" items="{oActivityLog>/testDataActivityLog}">
             <HBox>
                 <VBox width="6%" renderType="Bare" alignItems="Center" justifyContent="Start">
-                    <core:Icon src="sap-icon://circle-task-2" class="wbProcessFlowBarAuditIcon" color="#089B13" />
+                    <core:Icon src="sap-icon://circle-task-2" class="wbProcessFlowBarAuditIcon" color='{path:"oActivityLog>status",formatter:".formatter.activitylogColour"}' />
                     <VBox class="wbProcessFlowBarAudit" visible="{parts: ['oProcessFlowModel>auditId ','oProcessFlowModel>/lastActivityId'] ,formatter: '.formatter.wbSetProcessFlowAuditConnectingBar'}" />
                 </VBox>
                 <VBox class="sapUiSmallMarginBottom" width="92%">
                     <HBox justifyContent="SpaceBetween">
-                        <Text text="{path:'oActivityLog>title'}" class="wbProcessFlowAuditTime" />
-                        <Text text="{path:'oActivityLog>time'}" class="wbProcessFlowAuditTime" />
+                        <Text text="{path:'oActivityLog>title'}" class="activityLogTitle" />
+                        <Text text="{path:'oActivityLog>time'}" class="activityLogTime" />
                     </HBox>
-                    <VBox>
-                        <Text text="{path:'oActivityLog>role'}" class="wbProcessFlowAuditTime" />
-                        <Text text="{path:'oActivityLog>name'}" class="wbProcessFlowAuditTime" />
-                        <!-- <Text text="Status: {path:'oActivityLog>status'}" class="wbProcessFlowAuditTime" visible="{path:'oActivityLog>title' ,
-                        formatter: 'viatrix.utils.formatter.wbSetProcessFlowAuditStatus'}" /> -->
-                        <!-- <Text text='{path:"oActivityLog>name", formatter:".formatter.abc"}' /> -->
-                        <Text text="Status: {path:'oActivityLog>status'}" visible='{path:"oActivityLog>status",formatter:".formatter.wbSetProcessFlowAuditStatus"}'/>
+                    <VBox class="activityLogDescription" >
+                        <Text text="{path:'oActivityLog>role'}" class="activityLogRole" />
+                        <Text text="{path:'oActivityLog>name'}" class="activityLogName" />
+                        <Text text="Status: {path:'oActivityLog>status'}" visible='{path:"oActivityLog>status",formatter:".formatter.wbSetProcessFlowAuditStatus"}' class="activityLogStatus" />
                     </VBox>
                 </VBox>
             </HBox>
