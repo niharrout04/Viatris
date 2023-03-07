@@ -28,10 +28,10 @@ function (FormattedText, HTML) {
             
         },
         lineBreakWord: function(word1, word2){
-            debugger;
-            var s=word1+"\n"+word2;
-            // return new FormattedText({htmlText: ""})
-            return s;
+            // console.log("word1= "+word1);
+            var s=word1+"&#10;"+word2;
+             return s;
+            // return new FormattedText({htmlText: "General\nInformation"});
         },
         setInputenbled:function(a,b){
 

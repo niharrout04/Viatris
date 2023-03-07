@@ -6,35 +6,39 @@
                     <Title titleStyle="H3" text="Vendor Registration Form" class="voTitle" />
                     <ToolbarSpacer />
                 </Toolbar>
+                <!-- <Text text="Tax \n Information"/> -->
                 <Wizard id="supplierdetailId" renderMode="Page" showNextButton="true" class="voWizard" navigationChange="handleNavigationChange">
-                    <WizardStep id="companyinfoID" class="voWizardstep" title='General Information'>
+                    <WizardStep id="companyinfoID" class="voWizardstep" title="{
+						parts: ['oActivityLog>/word1','oActivityLog>/word2'] ,
+						formatter: '.formatter.lineBreakWord'
+					}">
                         <content>
-                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm..GeneralInformation" type="XML" />
+                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.GeneralInformation" type="XML" />
                         </content>
                     </WizardStep>
-                    <WizardStep id="banktaxId" class="voWizardstep" title="Tax Information" validated="true">
+                    <WizardStep id="banktaxId" class="voWizardstep" title="Tax &#10;Information" validated="true">
                         <content>
-                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm..TaxInformation" type="XML" />
+                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.TaxInformation" type="XML" />
                         </content>
                     </WizardStep>
                     <WizardStep id="contactId" class="voWizardstep" title="Bank Information" validated="true">
                         <content>
-                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm..BankInformation" type="XML" />
+                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.BankInformation" type="XML" />
                         </content>
                     </WizardStep>
                     <WizardStep id="companyId" class="voWizardstep" title="Company Code Information">
                         <content>
-                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm..CompanyCodeInformation" type="XML" />
+                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.CompanyCodeInformation" type="XML" />
                         </content>
                     </WizardStep>
                     <WizardStep id="purchasingId" class="voWizardstep" title="Purchasing Organisation Information">
                         <content>
-                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm..PurchasingOrganisationInformation" type="XML" />
+                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.PurchasingOrganisationInformation" type="XML" />
                         </content>
                     </WizardStep>
                     <WizardStep id="documentId" class="voWizardstep" title="Documents and Attachments">
                         <content>
-                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm..DocumentAndAttachments" type="XML" />
+                            <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.DocumentAndAttachments" type="XML" />
                         </content>
                     </WizardStep>
                 </Wizard>
