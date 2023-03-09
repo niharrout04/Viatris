@@ -63,6 +63,12 @@
           "settings": {
               "defaultBindingMode": "TwoWay"
           }
+      },
+      "oButtonmodel": {
+          "type": "sap.ui.model.json.JSONModel",
+          "settings": {
+              "defaultBindingMode": "TwoWay"
+          }
       }
     },
     "resources": {

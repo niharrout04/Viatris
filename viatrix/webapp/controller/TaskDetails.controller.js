@@ -28,21 +28,24 @@ sap.ui.define([
                         "time": "20 Sep 2022  09:35",
                         "role": "Requester",
                         "name": "Peter Daemen",
-                        "status": ""
+                        "status": "",
+                        "id": 0
                     },
                     {
                         "title": "First Level Approval",
                         "time": "24 Sep 2022  11:00",
                         "role": "Local Reviewer",
                         "name": "Luc Paredis",
-                        "status": ""
+                        "status": "",
+                        "id": 1
                     },
                     {
                         "title": "Second Level Approval",
                         "time": "  Today  12:09",
                         "role": "GMDM Reviewer",
                         "name": "Eric Carl",
-                        "status": "Pending"
+                        "status": "Pending",
+                        "id":  2
                     }
                 ];
 

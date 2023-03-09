@@ -42,7 +42,7 @@
     background: transparent;
 }
 
-.voToolBarTable{
+.voToolBarTable {
     height: 3.2rem !important;
     background: transparent;
 }
@@ -54,14 +54,16 @@
     height: 2.5rem !important;
 }
 
-/* Global panel style */
-.sapMPanelHdr{
+/* panel style */
+.sapMPanelHdr {
     color: #1D1D1D !important;
     font-weight: 600 !important;
 }
-.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb{
+
+.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv,.sapMPanelWrappingDivTb {
     border-bottom: none !important;
 }
+
 .sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
     font-size: 1rem;
     font-weight: 600;
@@ -70,9 +72,14 @@
 .sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
     margin: 0.625rem 0rem 0.625rem 0rem !important;
 }
-.sapMPanel .sapMPanelWrappingDiv .sapMPanelHdr, .sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB {
+.sapMPanel>.sapMPanelHdr,.sapMPanelWrappingDiv,.sapMPanelWrappingDivTb {
+    margin-top: 3px !important;
+}
+
+.sapMPanel .sapMPanelWrappingDiv .sapMPanelHdr,.sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB {
     margin-left: 4.2rem;
 }
+
 .sapMPanelWrappingDiv .sapUiIcon {
     background: #FFFFFF;
     border: 1px solid #703E97;
@@ -158,7 +165,7 @@
 .sapMInputBaseDisabled {
     opacity: 1;
 }
- 
+
 /* combobox style */
 
 .voComboBox .sapMInputBaseContentWrapper {
@@ -337,10 +344,11 @@
 
 /* Vendor Registration Form  */
 /* Panel  */
-.vendorRegistrationFormPanel.sapMPanel{
+.vendorRegistrationFormPanel.sapMPanel {
     border-radius: 0 !important;
     padding-top: 16px;
 }
+
 .vendorRegistrationFormPanel .sapMPanelWrappingDiv .sapUiIcon {
     right: 0;
     background: #703E97;
@@ -349,23 +357,30 @@
     height: 12px;
     margin-right: 2rem;
 }
+
 .vendorRegistrationFormPanel .sapUiIcon {
     color: white;
 }
+
 .vendorRegistrationFormPanel .sapMPanelHdr {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.0025em;
-    color: #512D6D;
+    color: #512D6D !important;
 }
-.vendorRegistrationFormPanel.sapMPanel .sapMPanelWrappingDiv:not(.sapMPanelWrappingDivExpanded), .sapMPanel .sapMPanelWrappingDivTb:not(.sapMPanelWrappingDivTbExpanded) {
+
+.vendorRegistrationFormPanel.sapMPanel .sapMPanelWrappingDiv:not(.sapMPanelWrappingDivExpanded),
+.sapMPanel .sapMPanelWrappingDivTb:not(.sapMPanelWrappingDivTbExpanded) {
     border-radius: 0.75rem;
     overflow: hidden;
+    margin-bottom: 16px;
 }
+
 .vendorRegistrationFormPanel.sapMPanel .sapMPanelHdr {
     margin-left: 2rem !important;
 }
+
 .sapMPanelExpandable .sapMPanelWrappingDiv:focus {
     outline: none !important;
 }
@@ -373,7 +388,10 @@
 .sapMPanelBGTranslucent {
     background-color: transparent;
 }
-.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
+
+.sapMPanel>.sapMPanelHdr,
+.sapMPanelWrappingDiv,
+.sapMPanelWrappingDivTb {
     background: transparent;
 }
 
@@ -382,6 +400,7 @@
     background: rgba(249, 249, 249, 0.8);
     border-radius: 8px;
 }
+
 .vendorRegistrationFormSectionLabel {
     font-weight: 600;
     font-size: 16px;
@@ -389,6 +408,7 @@
     letter-spacing: 0.0025em;
     color: #512D6D;
 }
+
 .voGridLabel {
     font-weight: 400;
     font-size: 14px;
@@ -401,68 +421,85 @@
 .sapMWizard .sapMWizardStepContainer {
     margin-top: 6rem;
 }
-.sapMWizardProgressNav{
+
+.sapMWizardProgressNav {
     height: 6rem;
 }
+
 .voWizardstep .sapMWizardStepTitle {
     display: none;
 }
+
 .voWizard.sapMWizard.sapMWizardBgStandard .sapMWizardStepContainer {
     background: white;
 }
+
 .voWizard .sapMWizardProgressNav {
     z-index: 0;
 }
+
 .sapMWizardProgressNavStep::after {
     display: none;
 }
+
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep .sapMWizardProgressNavStepCircle {
     border-color: #E0E0E0;
     background: #F2F2F2;
     color: #757575;
 }
+
 .sapMWizardProgressNavStepCircle {
     border-color: #E0E0E0;
     background: #F2F2F2;
     color: #757575;
 }
+
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepCircle {
     background: #FFFFFF;
     color: #703E97;
     border-color: #703E97;
 }
+
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepTitle {
     color: #512D6D;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
 }
-.sapMWizardProgressNavStepTitle{
+
+.sapMWizardProgressNavStepTitle {
     color: #757575;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
 }
+
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep .sapMWizardProgressNavStepTitle {
     color: #757575;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
 }
+
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"]:hover .sapMWizardProgressNavStepCircle {
     background-color: transparent;
     color: #703E97;
 }
+
 .sapMWizardProgressNavStep:hover .sapMWizardProgressNavStepCircle {
     background-color: transparent;
     color: #703E97;
 }
+
 .sapMWizardProgressNavStep:focus .sapMWizardProgressNavStepContainer {
     outline: 0rem solid #3026B9;
 }
-.sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]::after, .sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep::after{
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]::after,
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep::after {
     display: none;
 }
+
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepCircle::after {
     height: 0.15rem;
     background: #512D6D;
@@ -486,13 +523,14 @@
     border-bottom-style: solid;
     z-index: -1;
 }
+
 .sapMWizardProgressNavStepTitle {
     overflow: hidden;
     max-width: 80% !important;
     max-height: 2.875rem;
-    line-height: 1rem;
-    font-size: .875rem;
-    color: #1d2d3e;
+    line-height: 150%;
+    font-size: 16px;
+    color: #757575;
     vertical-align: middle;
     display: -webkit-inline-box;
     -webkit-box-orient: vertical;
@@ -501,13 +539,13 @@
 
 /* .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepContainer::after {
     /* height: 0; */
-    /* height: 0.75rem !important;
+/* height: 0.75rem !important;
     background: #512D6D;
     border-top-left-radius: 0.125rem;
     border-top-right-radius: 0.125rem;
     width: 80%;
     bottom: -0.75rem; */
-/* } */ 
+/* } */
 
 /* Task Detail  */
 .taskDetailHbox {
@@ -515,15 +553,19 @@
     border: 1px solid #E0E0E0;
     display: flex;
 }
-.taskDetailsVbox1{
+
+.taskDetailsVbox1 {
     flex: 3;
 }
-.taskDetailsVbox2{
+
+.taskDetailsVbox2 {
     flex: 1.2;
 }
+
 .newVendorApplicationApproval {
     border-right: 1px solid #E0E0E0;
 }
+
 .taskDetailTitle {
     font-weight: 600;
     font-size: 24px;
@@ -532,9 +574,11 @@
     align-items: center;
     color: #1D1D1D;
 }
-.taskDetailButtonViewDetail{
+
+.taskDetailButtonViewDetail {
     width: 109px;
 }
+
 .taskDetailButtonViewDetail .sapMBtnInner {
     background-color: #E2D8EA;
     border-radius: 16px;
@@ -542,29 +586,36 @@
     padding: 4px 16px;
     height: 32px !important;
 }
+
 .taskDetailButtonViewDetail .sapMBtnContent {
     font-weight: 400;
     color: #512D6D;
 }
+
 .taskDetailButtonViewDetail :not(.sapMBtnDisabled)>.sapMBtnInner.sapMBtnActive {
     background-color: yellow;
 }
+
 .newVendorApplicationApprovalVBox1 {
     border-bottom: 1px solid #E0E0E0;
     padding: 16px;
     padding-left: 32px;
 }
+
 .newVendorApplicationApprovalVBox2 {
     border-bottom: 1px solid #E0E0E0;
     padding: 16px;
 
 }
+
 .newVendorApplicationApprovalVBox3 {
     padding: 16px;
 }
-.taskDetailAvatarVbox{
+
+.taskDetailAvatarVbox {
     padding: 8px;
 }
+
 .taskDetailAvatarTitle {
     font-weight: 600;
     font-size: 16px;
@@ -573,6 +624,7 @@
     align-items: center;
     color: #424242;
 }
+
 .taskDetailAvatarTimestamp {
     font-weight: 500;
     font-size: 16px;
@@ -581,18 +633,21 @@
     align-items: center;
     color: #757575;
 }
+
 .taskDetailFormLabel {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #757575;
+    color: #424242;
 }
+
 .taskDetailFormText {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     color: #424242;
 }
+
 .taskDetailSubTitle {
     font-weight: 400;
     font-size: 18px;
@@ -602,6 +657,7 @@
     letter-spacing: 0.0015em;
     color: #1D1D1D;
 }
+
 .taskDetailLabelOnboardingDetail {
     font-weight: 600;
     font-size: 18px;
@@ -619,11 +675,87 @@
     align-items: center;
     color: #424242;
 }
- /* Activity Log  */
- .wbProcessFlowBarAudit {
-    height: 100%;
+
+/* Activity Log  */
+.activityLog {
+    padding: 16px;
+}
+
+.wbProcessFlowBarAudit {
+    height: 100px;
     border-left: 3px solid #E0E0E0;
     margin-top: 3px;
+}
+
+.activityLogDescription {
+    padding: 12px;
+}
+
+.activityLogTitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.activityLogTime {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.0025em;
+    color: #757575;
+
+}
+
+.activityLogRole {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #757575;
+
+}
+
+.activityLogName {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #424242;
+
+}
+
+.activityLogStatus {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #1D1D1D;
+}
+
+/* Wizard Footer  */
+.voFormFooterToolbar {
+    background-color: #512D6D !important;
+    height: 56px !important;
+}
+
+.voFormBtnDefault {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+}
+.voFormBtnDefault .sapMBtnContent {
+    color: white;
+}
+.voFormBtnDefault .sapMBtnHoverable:not(.sapMBtnActive) {
+    background-color: transparent !important;
+}
+.voFormBtnEmphasized .sapMBtnInner {
+    background-color: white !important;
+    border-radius: 4px;
+    border-color: white !important;
+}
+
+.voFormBtnEmphasized .sapMBtnContent {
+    color: #512D6D;
 }
 
 
@@ -662,6 +794,6 @@
 
 
 /* white background css  */
-.whiteBg{
+.whiteBg {
     background-color: white;
 }
