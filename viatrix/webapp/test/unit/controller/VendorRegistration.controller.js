@@ -1,13 +1,13 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"viatrix/controller/VendorRegistration.controller"
+	"viatrix/controller/SearchVendor.controller"
 ], function (Controller) {
 	"use strict";
 
-	QUnit.module("VendorRegistration Controller");
+	QUnit.module("SearchVendor Controller");
 
-	QUnit.test("I should test the VendorRegistration controller", function (assert) {
+	QUnit.test("I should test the SearchVendor controller", function (assert) {
 		var oAppController = new Controller();
 		oAppController.onInit();
 		assert.ok(oAppController);

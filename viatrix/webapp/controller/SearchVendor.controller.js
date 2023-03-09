@@ -7,10 +7,11 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("viatrix.controller.VendorRegistration", {
+        return Controller.extend("viatrix.controller.SearchVendor", {
             onInit: function () {
                 this.oComponent = this.getOwnerComponent();
                 this.router = this.getOwnerComponent().getRouter();
+                
             },
             onCreatePOVendor(){
                 this.router.navTo("VendorRegistrationForm");

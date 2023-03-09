@@ -84,10 +84,10 @@
       },
       "routes": [
         {
-          "name": "VendorRegistration",
+          "name": "SearchVendor",
           "pattern": ":?query:",
           "target": [
-            "TargetVendorRegistration"
+            "TargetSearchVendor"
           ]
         },
         {
@@ -106,12 +106,12 @@
         }
       ],
       "targets": {
-        "TargetVendorRegistration": {
+        "TargetSearchVendor": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "VendorRegistration",
-          "viewName": "VendorRegistration"
+          "viewId": "SearchVendor",
+          "viewName": "SearchVendor"
         },
         "TargetVendorRegistrationForm": {
           "viewType": "XML",
