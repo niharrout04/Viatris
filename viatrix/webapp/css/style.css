@@ -60,25 +60,15 @@
     font-weight: 600 !important;
 }
 
-.sapMPanel>.sapMPanelHdr,
-.sapMPanelWrappingDiv,
-.sapMPanelWrappingDivTb {
+.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv,.sapMPanelWrappingDivTb {
     border-bottom: none !important;
 }
 
-.sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
-    font-size: 1rem;
-    font-weight: 600;
+.sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
+    margin: 0.625rem 0rem 0.625rem 0rem !important;
 }
 
-.sapMPanel>.sapMPanelHdr,
-.sapMPanelWrappingDiv,
-.sapMPanelWrappingDivTb {
-    margin-top: 3px !important;
-}
-
-.sapMPanel .sapMPanelWrappingDiv .sapMPanelHdr,
-.sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB {
+.sapMPanel .sapMPanelWrappingDiv .sapMPanelHdr,.sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB {
     margin-left: 4.2rem;
 }
 
@@ -89,6 +79,12 @@
     height: 12px;
     color: #757575;
     margin-left: 2rem;
+}
+.sapMPanelContent {
+    padding: 0.625rem 1rem 0.625rem 1rem !important;
+    box-sizing: border-box;
+    overflow: auto;
+    white-space: normal;
 }
 
 
@@ -105,7 +101,9 @@
     color: #512D6D;
     font-weight: bold;
 }
-
+.voTableTitle{
+    font-weight: bold;
+}
 /* Label style */
 .voLabel {
     color: #1D1D1D;
@@ -311,9 +309,29 @@
     height: 40px !important;
 }
 
-
-
-
+/* Global Table */
+.sapUiSizeCompact .sapMListTblRow {
+    height: 54px;
+    /* background-color: #F9F9F9 !important; */
+}
+.sapMTableTH {
+    background: #E2D8EA !important;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+.sapMList {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF !important;
+    margin: 0;
+    padding: 0;
+}
+.sapMListShowSeparatorsAll .sapMLIBShowSeparator:last-child>td:not(.sapMListTblDummyCell), .sapMListShowSeparatorsAll .sapMListTblSubRow:last-child>td:not(.sapMListTblDummyCell) {
+    border-bottom: none !important
+}
+.sapMTableTBody:not(.sapMListTblHasPopin)>.sapMLIBSelected:last-child, .sapMTableTBody.sapMListTblHasPopin>.sapMLIBSelected+.sapMListTblSubRow:last-child {
+    box-shadow: none !important;
+}
 
 
 /* Vendor Registration Form  */
