@@ -64,16 +64,8 @@
     border-bottom: none !important;
 }
 
-.sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
 .sapMPanel>.sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
     margin: 0.625rem 0rem 0.625rem 0rem !important;
-}
-.sapMPanel>.sapMPanelHdr,.sapMPanelWrappingDiv,.sapMPanelWrappingDivTb {
-    margin-top: 3px !important;
 }
 
 .sapMPanel .sapMPanelWrappingDiv .sapMPanelHdr,.sapMPanel .sapMPanelWrappingDivTb .sapMIBar.sapMTB {
