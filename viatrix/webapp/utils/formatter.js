@@ -29,9 +29,15 @@ function (FormattedText, HTML) {
         },
         lineBreakWord: function(word1, word2){
             // console.log("word1= "+word1);
-            var s=word1+"&#10;"+word2;
-             return s;
-            // return new FormattedText({htmlText: "General\nInformation"});
+            // var s=word1+"&#10;"+word2;
+            //  return s;
+            var dd= document.getElementById("companyinfoID");
+            if(dd){
+                console.log("txtdd= "+dd);
+            }
+            var txt=new FormattedText({htmlText: "<strong>Hello</strong> <em>world</em>"}).getHtmlText();
+            console.log("txt= "+txt);
+                return txt;
         },
         setInputenbled:function(a,b){
 

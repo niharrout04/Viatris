@@ -3,7 +3,7 @@
     <VBox>
         <Label text="Tax Details" class="vendorRegistrationFormSectionLabel" />
         <VBox class="vendorRegistrationFormSection sapUiTinyMarginTop" >
-            <l:Grid defaultSpan="XL3 L3 M6 S12" id="idSupDet22">
+            <l:Grid defaultSpan="XL3 L3 M6 S12"  hSpacing="2">
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Tax Number 1" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />

@@ -17,15 +17,119 @@ sap.ui.define([
                 this.router = this.getOwnerComponent().getRouter();
                 var history= History.getInstance();
                 console.log("history- "+history.aHistory);
+
+
                 var oActivityLog = this.getOwnerComponent().getModel("oActivityLog");
                 this.oActivityLog = oActivityLog;
+                var oButtonmodel = this.getOwnerComponent().getModel("oButtonmodel");
+                this.oButtonmodel = oButtonmodel;
+
+
+
                 oActivityLog.setProperty("/test","test");
                 oActivityLog.setProperty("/word1","General");
                 oActivityLog.setProperty("/word2","Information");
+
+                this._oWizard = this.byId("vendorRegistrationFormWizard");
+                this._iSelectedStepIndex = 0;
+                this._oSelectedStep = this._oWizard.getSteps()[this._iSelectedStepIndex];
+                this.handleButtonsVisibility();
             },
 
             onTestNavigate: function(){
                 this.router.navTo("TaskDetails");
+            },
+            handleButtonsVisibility: function(){
+                var oButtonmodel = this.oButtonmodel;
+                if(this._iSelectedStepIndex===0){
+                    oButtonmodel.setProperty("/cancelButtonVisible", true);
+                    oButtonmodel.setProperty("/backButtonVisible", false);
+                    oButtonmodel.setProperty("/saveButtonVisible", true);
+                    oButtonmodel.setProperty("/nextButtonVisible", true);
+                    oButtonmodel.setProperty("/previewButtonVisible", false);
+                    oButtonmodel.setProperty("/submitButtonVisible", false);
+
+                }else if (this._iSelectedStepIndex===5){
+                    oButtonmodel.setProperty("/cancelButtonVisible", false);
+                    oButtonmodel.setProperty("/backButtonVisible", true);
+                    oButtonmodel.setProperty("/saveButtonVisible", true);
+                    oButtonmodel.setProperty("/nextButtonVisible", false);
+                    oButtonmodel.setProperty("/previewButtonVisible", true);
+                    oButtonmodel.setProperty("/submitButtonVisible", true);
+                }else{
+                    oButtonmodel.setProperty("/cancelButtonVisible", false);
+                    oButtonmodel.setProperty("/backButtonVisible", true);
+                    oButtonmodel.setProperty("/saveButtonVisible", true);
+                    oButtonmodel.setProperty("/nextButtonVisible", true);
+                    oButtonmodel.setProperty("/previewButtonVisible", false);
+                    oButtonmodel.setProperty("/submitButtonVisible", false);
+                }
+
+            },
+            handleNavigationChange: function (oEvent) {
+                this._oSelectedStep = oEvent.getParameter("step");
+                this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
+                this.handleButtonsVisibility();
+            },
+            onDialogNextButton: function () {
+                this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
+                // if (this._iSelectedStepIndex === 0) {
+                //     var oNextStep = this._oWizard.getSteps()[this._iSelectedStepIndex + 1];
+                //     var companyInfomandCheck = this.companyInfomandCheck();
+                //     if (!companyInfomandCheck) {
+                //         if (this._oSelectedStep && !this._oSelectedStep.bLast) {
+                //             this._oWizard.goToStep(oNextStep, true);
+                //         } else {
+                //             this._oWizard.nextStep();
+                //         }
+                //         this._iSelectedStepIndex++;
+                //         this._oSelectedStep = oNextStep;
+
+                //         this.handleButtonsVisibility();
+                //     }
+                // } else if (this._iSelectedStepIndex === 1) {
+                //     var oNextStep = this._oWizard.getSteps()[this._iSelectedStepIndex + 1];
+                //     var banktaxInfomandCheck = this.banktaxInfomandCheck();
+                //     if (!banktaxInfomandCheck) {
+                //         if (this._oSelectedStep && !this._oSelectedStep.bLast) {
+                //             this._oWizard.goToStep(oNextStep, true);
+                //         } else {
+                //             this._oWizard.nextStep();
+                //         }
+                //         this._iSelectedStepIndex++;
+                //         this._oSelectedStep = oNextStep;
+
+                //         this.handleButtonsVisibility();
+                //     }
+                // } else {
+                    var oNextStep = this._oWizard.getSteps()[this._iSelectedStepIndex + 1];
+                    if (this._oSelectedStep && !this._oSelectedStep.bLast) {
+                        this._oWizard.goToStep(oNextStep, true);
+                    } else {
+                        this._oWizard.nextStep();
+                    }
+                    this._iSelectedStepIndex++;
+                    this._oSelectedStep = oNextStep;
+
+                    this.handleButtonsVisibility();
+                // }
+
+
+            },
+            onDialogBackButton: function () {
+                this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
+                var oPreviousStep = this._oWizard.getSteps()[this._iSelectedStepIndex - 1];
+
+                if (this._oSelectedStep) {
+                    this._oWizard.goToStep(oPreviousStep, true);
+                } else {
+                    this._oWizard.previousStep();
+                }
+
+                this._iSelectedStepIndex--;
+                this._oSelectedStep = oPreviousStep;
+
+                this.handleButtonsVisibility();
             }
         });
     });
