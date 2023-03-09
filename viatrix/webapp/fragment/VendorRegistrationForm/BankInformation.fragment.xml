@@ -4,63 +4,63 @@
         <VBox class="vendorRegistrationFormSection sapUiTinyMarginTop" >
             <l:Grid defaultSpan="XL3 L3 M6 S12"  hSpacing="2">
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Country" class="sigLabel" />
+                    <Label text="Country" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Bank Keys" class="sigLabel" />
+                    <Label text="Bank Keys" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="bank Account Number" class="sigLabel" />
+                    <Label text="bank Account Number" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Account Holder" class="sigLabel" />
+                    <Label text="Account Holder" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Bank Control Key" class="sigLabel" />
+                    <Label text="Bank Control Key" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="IBAN" class="sigLabel" />
+                    <Label text="IBAN" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Partner Bank type" class="sigLabel" />
+                    <Label text="Partner Bank type" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Alternate Payee" required="true" class="sigLabel" />
+                    <Label text="Alternate Payee" required="true" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Instruction Key" class="sigLabel" />
+                    <Label text="Instruction Key" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Swift/BIC" class="sigLabel" />
+                    <Label text="Swift/BIC" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Bank Name" class="sigLabel" />
+                    <Label text="Bank Name" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Bank Branch" class="sigLabel" />
+                    <Label text="Bank Branch" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Street" class="sigLabel" />
+                    <Label text="Street" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="City" class="sigLabel" />
+                    <Label text="City" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Region" class="sigLabel" />
+                    <Label text="Region" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
             </l:Grid>

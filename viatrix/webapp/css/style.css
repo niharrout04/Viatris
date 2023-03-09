@@ -521,6 +521,36 @@
     bottom: -0.75rem; */
 /* } */
 
+
+/* Wizard Footer  */
+.voFormFooterToolbar {
+    background-color: #512D6D !important;
+    height: 56px !important;
+}
+
+.voFormBtnDefault {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+}
+.voFormBtnDefault .sapMBtnContent {
+    color: white;
+}
+.voFormBtnDefault .sapMBtnHoverable:not(.sapMBtnActive) {
+    background-color: transparent !important;
+}
+.voFormBtnEmphasized .sapMBtnInner {
+    background-color: white !important;
+    border-radius: 4px;
+    border-color: white !important;
+}
+
+.voFormBtnEmphasized .sapMBtnContent {
+    color: #512D6D;
+}
+
+
 /* Task Detail  */
 .taskDetailHbox {
     margin: 32px;
@@ -704,33 +734,7 @@
     color: #1D1D1D;
 }
 
-/* Wizard Footer  */
-.voFormFooterToolbar {
-    background-color: #512D6D !important;
-    height: 56px !important;
-}
 
-.voFormBtnDefault {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: white;
-}
-.voFormBtnDefault .sapMBtnContent {
-    color: white;
-}
-.voFormBtnDefault .sapMBtnHoverable:not(.sapMBtnActive) {
-    background-color: transparent !important;
-}
-.voFormBtnEmphasized .sapMBtnInner {
-    background-color: white !important;
-    border-radius: 4px;
-    border-color: white !important;
-}
-
-.voFormBtnEmphasized .sapMBtnContent {
-    color: #512D6D;
-}
 
 
 
