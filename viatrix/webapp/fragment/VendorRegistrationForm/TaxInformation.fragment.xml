@@ -2,8 +2,8 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
     <VBox>
         <Label text="Tax Details" class="vendorRegistrationFormSectionLabel" />
-        <VBox class="vendorRegistrationFormSection sapUiTinyMarginTop" >
-            <l:Grid defaultSpan="XL3 L3 M6 S12"  hSpacing="2">
+        <VBox class="vendorRegistrationFormSection sapUiTinyMarginTop">
+            <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Tax Number 1" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
@@ -34,7 +34,9 @@
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Tax Juridiction" required="true" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+                    <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
+                        <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
+                    </ComboBox>
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="VAT Registration Number" class="voGridLabel" />

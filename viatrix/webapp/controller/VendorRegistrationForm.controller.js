@@ -130,6 +130,31 @@ sap.ui.define([
                 this._oSelectedStep = oPreviousStep;
 
                 this.handleButtonsVisibility();
+            },
+            onClickAddSectionCompanyCodeInformation: function(oEvent){
+                var companyCodeInformationVbox = this.getView().byId("companyCodeInformationVbox");
+                var vbox1= new sap.m.VBox().addItem(new sap.m.Label({
+                    text: "Company Code",
+                    required: true
+                })).addItem(new sap.m.Input().addStyleClass("voInputText"));
+                var vbox2= new sap.m.VBox().addItem(new sap.m.Label({
+                    text: "Reconciliation Account",
+                    required: true
+                })).addItem(new sap.m.Input().addStyleClass("voInputText"));
+
+                var lGrid = new sap.ui.layout.Grid({
+                    defaultSpan: "XL3 L3 M6 S12",
+                    hSpacing: 2
+                }).addContent(vbox1).addContent(vbox2);
+                var mVbox= new sap.m.VBox().addItem(lGrid);
+                var mPanel = new sap.m.Panel({
+                    expandable: true,
+                    expanded: true,
+                    headerText: "test successful!"
+                }).addStyleClass("vendorRegistrationFormPanel").addContent(mVbox);
+
+                companyCodeInformationVbox.addItem(mPanel);
+
             }
         });
     });
