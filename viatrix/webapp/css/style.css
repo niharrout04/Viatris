@@ -312,17 +312,16 @@
 /* Global Table */
 .sapUiSizeCompact .sapMListTblRow {
     height: 54px;
-    /* background-color: #F9F9F9 !important; */
 }
-.sapMTableTH {
+.voTable .sapMTableTH {
     background: #E2D8EA !important;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #FFFFFF;
     vertical-align: middle;
 }
 .sapMList {
     position: relative;
     box-sizing: border-box;
-    border: 1px solid #FFFFFF !important;
+    border: 1px solid #e5e5e5 !important;
     margin: 0;
     padding: 0;
 }
@@ -332,7 +331,12 @@
 .sapMTableTBody:not(.sapMListTblHasPopin)>.sapMLIBSelected:last-child, .sapMTableTBody.sapMListTblHasPopin>.sapMLIBSelected+.sapMListTblSubRow:last-child {
     box-shadow: none !important;
 }
-
+.sapMListTblAlternateRowColors>:nth-child(odd), .sapMListTblAlternateRowColorsPopin>:nth-child(4n-1), .sapMListTblAlternateRowColorsPopin>:nth-child(4n), .sapMListTblAlternateRowColorsGrouped>.sapMListTblRowAlternate, .sapMListTblAlternateRowColorsGrouped>.sapMListTblRowAlternate+.sapMListTblSubRow {
+    background-color: #F9F9F9;
+}
+.sapMListTblAlternateRowColors>:nth-child(even), .sapMListTblAlternateRowColorsPopin>:nth-child(4n-1), .sapMListTblAlternateRowColorsPopin>:nth-child(4n), .sapMListTblAlternateRowColorsGrouped>.sapMListTblRowAlternate, .sapMListTblAlternateRowColorsGrouped>.sapMListTblRowAlternate+.sapMListTblSubRow {
+    background-color: #FFFFFF;
+}
 
 /* Vendor Registration Form  */
 /* Panel  */
@@ -439,35 +443,30 @@
     background: #F2F2F2;
     color: #757575;
 }
-
-.sapMWizardProgressNavStepCircle {
-    border-color: #E0E0E0;
-    background: #F2F2F2;
-    color: #757575;
-}
-
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepCircle {
     background: #FFFFFF;
     color: #703E97;
     border-color: #703E97;
 }
-
+.sapMWizardProgressNavStepCircle {
+    border-color: #703E97;
+    background: #703E97;
+    color: #FFFFFF;
+}
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep .sapMWizardProgressNavStepTitle {
+    color: #757575;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
 .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepTitle {
     color: #512D6D;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
 }
-
 .sapMWizardProgressNavStepTitle {
-    color: #757575;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-}
-
-.sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"]~.sapMWizardProgressNavStep .sapMWizardProgressNavStepTitle {
-    color: #757575;
+    color: #424242;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
@@ -522,22 +521,8 @@
     max-height: 2.875rem;
     line-height: 150%;
     font-size: 16px;
-    color: #757575;
-    vertical-align: middle;
-    display: -webkit-inline-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
 }
 
-/* .sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavStepContainer::after {
-    /* height: 0; */
-/* height: 0.75rem !important;
-    background: #512D6D;
-    border-top-left-radius: 0.125rem;
-    border-top-right-radius: 0.125rem;
-    width: 80%;
-    bottom: -0.75rem; */
-/* } */
 
 /* Task Detail  */
 .taskDetailHbox {

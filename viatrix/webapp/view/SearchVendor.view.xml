@@ -53,7 +53,7 @@
                 <Toolbar class="voToolBarH3 voHideUnderline ">
                     <Title titleStyle="H5" text="Vendor Details(0)" class="voTableTitle" />
                 </Toolbar>
-                <Table id="dunssearchtable" alternateRowColors="true" class="voTable" growing="true" growingThreshold="6" noDataText="{i18n>NoData}" visible="true" items="{oCommonModel>/Supplierinfo}">
+                <Table id="dunssearchtable" alternateRowColors="true" class="voTable" growing="true" growingThreshold="6" noDataText="{i18n>NoData}" visible="true" items="{oCommonModel>/Supplierinfo}" >
                     <columns>
                         <Column width="12%" hAlign="Center">
                             <Text class="voTextH" text="{i18n>VendorName}" />
