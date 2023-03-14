@@ -109,6 +109,13 @@
           "target": [
             "TargetTaskDetails"
           ]
+        },
+        {
+          "name": "VendorDetailOverview",
+          "pattern": "VendorDetailOverview",
+          "target": [
+            "TargetVendorDetailOverview"
+          ]
         }
       ],
       "targets": {
@@ -132,6 +139,13 @@
           "clearControlAggregation": false,
           "viewId": "TaskDetails",
           "viewName": "TaskDetails"
+        },
+        "TargetVendorDetailOverview": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorDetailOverview",
+          "viewName": "VendorDetailOverview"
         }
       }
     },

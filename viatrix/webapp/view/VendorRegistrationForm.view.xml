@@ -2,6 +2,14 @@
     <Page id="page" showHeader="false" class="voPage">
         <content>
             <VBox>
+            <Breadcrumbs currentLocationText="Laptop" separatorStyle="Slash">
+				<Link press="onPress" text="Products" icon="sap-icon://home" />
+				<Link press="onPress" text="Suppliers"/>
+				<Link press="onPress" text="Titanium"/>
+				<Link press="onPress" text="Ultra portable"/>
+				<Link press="onPress" text="12 inch"/>
+				<Link press="onPress" text="Super portable deluxe" icon="sap-icon://home"/>
+			</Breadcrumbs>
                 <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd sapUiLargeMarginTop">
                     <Title titleStyle="H3" text="Vendor Registration Form" class="voTitle" />
                     <ToolbarSpacer />

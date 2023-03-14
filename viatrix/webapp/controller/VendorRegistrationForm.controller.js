@@ -30,6 +30,9 @@ sap.ui.define([
                 oActivityLog.setProperty("/word1","General");
                 oActivityLog.setProperty("/word2","Information");
 
+
+                console.log(sap.ui.core.Element.getMetadata());
+
                 this._oWizard = this.byId("vendorRegistrationFormWizard");
                 this._iSelectedStepIndex = 0;
                 this._oSelectedStep = this._oWizard.getSteps()[this._iSelectedStepIndex];
