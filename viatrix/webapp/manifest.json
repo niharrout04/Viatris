@@ -69,7 +69,13 @@
           "settings": {
               "defaultBindingMode": "TwoWay"
           }
-      }
+      },
+      "oCommonModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+    }
     },
     "resources": {
       "css": [
