@@ -23,6 +23,8 @@ sap.ui.define([
                 this.oActivityLog = oActivityLog;
                 var oButtonmodel = this.getOwnerComponent().getModel("oButtonmodel");
                 this.oButtonmodel = oButtonmodel;
+                var oVendorDetailModel = this.getOwnerComponent().getModel("oVendorDetailModel");
+                this.oVendorDetailModel = oVendorDetailModel;
 
 
 
@@ -158,6 +160,21 @@ sap.ui.define([
 
                 companyCodeInformationVbox.addItem(mPanel);
 
+            },
+            getVendorDetail: function(){
+                var that = this, url, sUrl;
+                url = "https://viatrisvendoronboarding.cfapps.eu10.hana.ondemand.com/vendorDetails/getVendorDetails/VM000001" ;
+                //sUrl = "/lookupController/region/" + selectedCountry;
+                jQuery.ajax({
+                    method: "GET",
+                    url: url,
+                    success: function (data) {
+                        console.log("success");
+                    },
+                    error: function (oResp) {
+                        MessageBox.error("Error" + oResp.responseText);
+                    }
+                })
             }
         });
     });

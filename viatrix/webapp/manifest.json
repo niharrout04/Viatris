@@ -59,23 +59,30 @@
         }
       },
       "oActivityLog": {
-          "type": "sap.ui.model.json.JSONModel",
-          "settings": {
-              "defaultBindingMode": "TwoWay"
-          }
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
       },
       "oButtonmodel": {
-          "type": "sap.ui.model.json.JSONModel",
-          "settings": {
-              "defaultBindingMode": "TwoWay"
-          }
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
       },
       "oCommonModel": {
         "type": "sap.ui.model.json.JSONModel",
         "settings": {
-            "defaultBindingMode": "TwoWay"
+          "defaultBindingMode": "TwoWay"
         }
-    }
+      },
+      "oVendorDetailModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/VendorDetail.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      }
     },
     "resources": {
       "css": [
