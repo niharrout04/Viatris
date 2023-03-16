@@ -3,7 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
-    xmlns:forms="sap.ui.layout.form"
+    xmlns:form="sap.ui.layout.form"
     xmlns:tnt="sap.tnt"
     xmlns:core="sap.ui.core"
     xmlns:comm="sap.suite.ui.commons"
@@ -11,20 +11,420 @@
     xmlns:uxap="sap.uxap"
     xmlns:layout="sap.ui.layout"
     xmlns:u="sap.ui.unified"
+    xmlns:grid="sap.ui.layout.cssgrid"
     height="100%"
 >
     <Page showHeader="false" enableScrolling="false" class="sigPage sapUiSmallMarginEnd">
         <uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="false" showFooter="true" showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress" showAnchorBar="false" class=" sapUiTinyMarginTop sapUiSmallMarginBottom ">
             <uxap:sections>
-                <uxap:ObjectPageSection titleUppercase="false" id="generalInformationSection" title="General Information" importance="Medium" class="uxapHeaderTitle">
+                <uxap:ObjectPageSection titleUppercase="false" id="generalInformationSection" title="Vendor Details" importance="Medium" class="uxapHeaderTitle">
                     <uxap:subSections>
-                        <uxap:ObjectPageSubSection id="supplierInformation" title="General Information" titleUppercase="false" class="marginSection" showTitle="false">
+                        <uxap:ObjectPageSubSection title="General Information" titleUppercase="false" class="marginSection">
                             <VBox>
-                                <Text text="test?" />
+                                <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                    <VBox class="demoBox">
+                                        <Label text="Vendor Account Group" wrapping="true" />
+                                        <Text text="A Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Name 1" wrapping="true" />
+                                        <Text text="B Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Name 2" wrapping="true" />
+                                        <Text text="C Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Name 3" wrapping="true" />
+                                        <Text text="D Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Name 4" wrapping="true" />
+                                        <Text text="E Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Search Term 1" wrapping="true" />
+                                        <Text text="F Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Search Term 2" wrapping="true" />
+                                        <Text text="G Box subtitle" wrapping="true" />
+                                    </VBox>
+                                </grid:CSSGrid>
+                            </VBox>
+                        </uxap:ObjectPageSubSection>
+                        <uxap:ObjectPageSubSection title="Main Address" titleUppercase="false" class="marginSection">
+                            <VBox>
+                                <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                    <VBox class="demoBox">
+                                        <Label text="Street" wrapping="true" />
+                                        <Text text="A Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="House Number" wrapping="true" />
+                                        <Text text="B Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="District" wrapping="true" />
+                                        <Text text="C Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Postal Code" wrapping="true" />
+                                        <Text text="D Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="City" wrapping="true" />
+                                        <Text text="E Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Region" wrapping="true" />
+                                        <Text text="F Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Country" wrapping="true" />
+                                        <Text text="G Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Timezone" wrapping="true" />
+                                        <Text text="A Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Language" wrapping="true" />
+                                        <Text text="B Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="First Telephone Number" wrapping="true" />
+                                        <Text text="C Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Mobile Phone" wrapping="true" />
+                                        <Text text="D Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="First Fax Number" wrapping="true" />
+                                        <Text text="E Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Email" wrapping="true" />
+                                        <Text text="F Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Standard Communication Method" wrapping="true" />
+                                        <Text text="G Box subtitle" wrapping="true" />
+                                    </VBox>
+                                </grid:CSSGrid>
+                            </VBox>
+                        </uxap:ObjectPageSubSection>
+                        <uxap:ObjectPageSubSection title="Ordering Address" titleUppercase="false" class="marginSection">
+                            <VBox>
+                                <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                    <VBox class="demoBox">
+                                        <Label text="Preferred Payment Terms" wrapping="true" />
+                                        <Text text="A Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Country" wrapping="true" />
+                                        <Text text="B Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Name" wrapping="true" />
+                                        <Text text="C Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Address Line 1" wrapping="true" />
+                                        <Text text="D Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Address Line 2" wrapping="true" />
+                                        <Text text="E Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Address Line 3" wrapping="true" />
+                                        <Text text="F Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Address Line 4" wrapping="true" />
+                                        <Text text="G Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Address Line 5" wrapping="true" />
+                                        <Text text="A Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="District" wrapping="true" />
+                                        <Text text="B Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Postal Code" wrapping="true" />
+                                        <Text text="C Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="City" wrapping="true" />
+                                        <Text text="D Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Telephone Number" wrapping="true" />
+                                        <Text text="E Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Region/State/Province" wrapping="true" />
+                                        <Text text="F Box subtitle" wrapping="true" />
+                                    </VBox>
+                                    <VBox class="demoBox">
+                                        <Label text="Fax Number" wrapping="true" />
+                                        <Text text="G Box subtitle" wrapping="true" />
+                                    </VBox>
+                                </grid:CSSGrid>
                             </VBox>
                         </uxap:ObjectPageSubSection>
                     </uxap:subSections>
                 </uxap:ObjectPageSection>
+                <uxap:ObjectPageSection titleUppercase="false" title="Tax Information" id="taxInformationSection" importance="Medium" class="uxapHeaderTitle">
+                    <uxap:ObjectPageSubSection title="Tax Details" titleUppercase="true" class="marginSection">
+                        <VBox>
+                            <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                <VBox class="demoBox">
+                                    <Label text="Tax Number 1" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Number 2" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Number 3" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Number 4" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Number 5" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Number Type" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Type" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tax Jurisdiction" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="VAT Registration Number" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Transport Zone" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="POD Relevant" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Date of Birth" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Industry" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Vendor Calendar" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                            </grid:CSSGrid>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+                <uxap:ObjectPageSection titleUppercase="false" id="bankInformationSection" title="Bank Information" importance="Medium" class="uxapHeaderTitle">
+                    <uxap:ObjectPageSubSection title="Bank Details" titleUppercase="true" class="marginSection">
+                        <VBox>
+                            <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                <VBox class="demoBox">
+                                    <Label text="Country" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Bank Keys" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Bank Account Number" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Account Holder" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Bank Control Key" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="IBAN" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Partner Bank Type" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Alternate Payee" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Instruction Key" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Swift/BIC" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Bank Name" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Bank Branch" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Street" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="City" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Region" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                            </grid:CSSGrid>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+                <uxap:ObjectPageSection titleUppercase="false" id="companyCodeInformationSection" title="Company Code Information" importance="Medium" class="uxapHeaderTitle">
+                <uxap:ObjectPageSubSection title="Company Code Information" titleUppercase="true" class="marginSection">
+                        <VBox >
+                            <Label text="Accounting and Correspondence Details 1" />
+                            <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                <VBox class="demoBox">
+                                    <Label text="Company Code" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Reconciliation Account" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Interest Ind." wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="W.Tax Code" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="WH. Tax Country" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Recipient Type" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Exemption No" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Valid Until" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Exemption Authority" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Payment Terms" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Tolerance Group" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Payment Methods" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Payment Block" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="House Bank" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Grouping Key" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Accounting Clerk" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Accounting Clerk's Fax" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Accounting Clerk's Telephone" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Clerk at Supplier" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Planning Group" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Minority Indicator" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Clerk Email Address" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Reconciliation Account in General Ledger" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Check Flag for double invoices or Credit Memo" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Company Code Deletion Block" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Sort Key for Payment Assignment" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                            </grid:CSSGrid>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+                
             </uxap:sections>
         </uxap:ObjectPageLayout>
     </Page>
