@@ -424,6 +424,119 @@
                         </VBox>
                     </uxap:ObjectPageSubSection>
                 </uxap:ObjectPageSection>
+                <uxap:ObjectPageSection titleUppercase="false" id="purchasingOrganizationInformationSection" title="Purchasing OrganizationInformation" importance="Medium" class="uxapHeaderTitle">
+                <uxap:ObjectPageSubSection title="Purchasing OrganizationInformation" titleUppercase="true" class="marginSection">
+                        <VBox >
+                            <Label text="PURCHASING DETAILS 1" />
+                            <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
+                                <VBox class="demoBox">
+                                    <Label text="Purchasing Organization *" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Purchase Order Currency *" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Terms of Payment *" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Incoterms *" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Incoterms 2 " wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Price Data Control " wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Account with Vendor " wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Shipping Condition" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Purchasing Group *" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Planned Delivery Date" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Confirmation Control " wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Unit of Measure Group " wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Rounding Profile" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Purchase Organization Deletion Flag " wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Indicator: GR- Based Invoice Verification " wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="ABC Indicator" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Responsible Sales Person " wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Sales Person’s Telephone Number" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Order Acknowledgement Requirement " wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Automatic Purchase Order Generation" wrapping="true" />
+                                    <Text text="E Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Plant *" wrapping="true" />
+                                    <Text text="F Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Supplier Subrange" wrapping="true" />
+                                    <Text text="G Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Supplier Currency" wrapping="true" />
+                                    <Text text="A Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Acknowledgement Required" wrapping="true" />
+                                    <Text text="B Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="GR-Bassed IV" wrapping="true" />
+                                    <Text text="C Box subtitle" wrapping="true" />
+                                </VBox>
+                                <VBox class="demoBox">
+                                    <Label text="Mode of Transport - Border" wrapping="true" />
+                                    <Text text="D Box subtitle" wrapping="true" />
+                                </VBox>
+                            </grid:CSSGrid>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
                 
             </uxap:sections>
         </uxap:ObjectPageLayout>
