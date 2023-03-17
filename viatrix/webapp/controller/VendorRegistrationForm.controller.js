@@ -13,8 +13,16 @@ sap.ui.define([
             formatter: formatter,
 
             onInit: function () {
+
+
                 this.oComponent = this.getOwnerComponent();
                 this.router = this.getOwnerComponent().getRouter();
+
+
+                this.sResolvedURI = this.getOwnerComponent().getManifestObject().resolveUri("");
+                this.sResolvedURI = this.sResolvedURI === "./" ? "" : this.sResolvedURI;
+
+
                 var history= History.getInstance();
                 console.log("history- "+history.aHistory);
 
@@ -39,6 +47,7 @@ sap.ui.define([
                 this._iSelectedStepIndex = 0;
                 this._oSelectedStep = this._oWizard.getSteps()[this._iSelectedStepIndex];
                 this.handleButtonsVisibility();
+                this.getVendorDetail();
             },
 
             onTestNavigate: function(){
@@ -162,14 +171,18 @@ sap.ui.define([
 
             },
             getVendorDetail: function(){
-                var that = this, url, sUrl;
-                url = "https://viatrisvendoronboarding.cfapps.eu10.hana.ondemand.com/vendorDetails/getVendorDetails/VM000001" ;
-                //sUrl = "/lookupController/region/" + selectedCountry;
+                var oVendorDetailModel = this.oVendorDetailModel;
+
+                var sUrl = "/vendorDetails/getVendorDetails/VM000001" ;
+                // var url = that.sResolvedURI + "Viatris_Vendor_Onboarding" + sUrl;
                 jQuery.ajax({
-                    method: "GET",
-                    url: url,
+                    url: sUrl,
+                    type: "GET",
                     success: function (data) {
-                        console.log("success");
+                        
+                        oVendorDetailModel.setProperty("/", data.data);
+                        console.log("success "+oVendorDetailModel.getProperty("/name1"));
+
                     },
                     error: function (oResp) {
                         MessageBox.error("Error" + oResp.responseText);
