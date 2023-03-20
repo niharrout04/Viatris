@@ -33,6 +33,11 @@ sap.ui.define([
                 this.oButtonmodel = oButtonmodel;
                 var oVendorDetailModel = this.getOwnerComponent().getModel("oVendorDetailModel");
                 this.oVendorDetailModel = oVendorDetailModel;
+                var oSupplierDetailModel = this.getOwnerComponent().getModel("oSupplierDetailModel");
+                this.oSupplierDetailModel = oSupplierDetailModel;
+
+
+                oSupplierDetailModel.setProperty("/companyCodeInfo",[]);
 
 
 
@@ -86,6 +91,17 @@ sap.ui.define([
                 this.handleButtonsVisibility();
             },
             onDialogNextButton: function () {
+
+                var oSupplierDetailModel = this.oSupplierDetailModel;
+                var oVendorDetailModel = this.oVendorDetailModel;
+                console.log("name 1= "+oSupplierDetailModel.getProperty("/street"));
+                console.log("name 1= "+oSupplierDetailModel.getProperty("/companyCodeInfo"));
+                var arrCompany = oSupplierDetailModel.getProperty("/companyCodeInfo");
+                console.log("arrCompany= "+arrCompany);
+                console.log("test = "+oSupplierDetailModel.getProperty("/test"));
+
+
+
                 this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
                 // if (this._iSelectedStepIndex === 0) {
                 //     var oNextStep = this._oWizard.getSteps()[this._iSelectedStepIndex + 1];
@@ -147,10 +163,17 @@ sap.ui.define([
             },
             onClickAddSectionCompanyCodeInformation: function(oEvent){
                 var companyCodeInformationVbox = this.getView().byId("companyCodeInformationVbox");
-                var vbox1= new sap.m.VBox().addItem(new sap.m.Label({
+                var testPanel = this.getView().byId("panel1");
+                var idArray=["9","8","7"];
+                testPanel.clone("lk",idArray);
+
+                var vbox1= new sap.m.VBox()
+                   .addItem(new sap.m.Label({
                     text: "Company Code",
                     required: true
-                })).addItem(new sap.m.Input().addStyleClass("voInputText"));
+                })).addItem(new sap.m.Input({
+                    value: "{oVendorDetailModel>companyCode}"
+                }).addStyleClass("voInputText"));
                 var vbox2= new sap.m.VBox().addItem(new sap.m.Label({
                     text: "Reconciliation Account",
                     required: true
@@ -167,13 +190,14 @@ sap.ui.define([
                     headerText: "test successful!"
                 }).addStyleClass("vendorRegistrationFormPanel").addContent(mVbox);
 
-                companyCodeInformationVbox.addItem(mPanel);
+                // companyCodeInformationVbox.addItem(mPanel);
+                companyCodeInformationVbox.addItem(testPanel);
 
             },
             getVendorDetail: function(){
                 var oVendorDetailModel = this.oVendorDetailModel;
 
-                var sUrl = "/vendorDetails/getVendorDetails/VM000001" ;
+                var sUrl = "/vendorDetails/getVendorDetails/VM000004" ;
                 // var url = that.sResolvedURI + "Viatris_Vendor_Onboarding" + sUrl;
                 jQuery.ajax({
                     url: sUrl,
@@ -181,7 +205,9 @@ sap.ui.define([
                     success: function (data) {
                         
                         oVendorDetailModel.setProperty("/", data.data);
-                        console.log("success "+oVendorDetailModel.getProperty("/name1"));
+                        console.log("success1 "+oVendorDetailModel.getProperty("/name1"));
+                        var arr= oVendorDetailModel.getProperty("/address");
+                        console.log("success 333"+arr[0].city);
 
                     },
                     error: function (oResp) {

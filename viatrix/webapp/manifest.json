@@ -82,6 +82,12 @@
         "settings": {
           "defaultBindingMode": "TwoWay"
         }
+      },
+      "oSupplierDetailModel": {
+          "type": "sap.ui.model.json.JSONModel",
+          "settings": {
+              "defaultBindingMode": "TwoWay"
+          }
       }
     },
     "resources": {

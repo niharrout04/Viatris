@@ -4,36 +4,36 @@
         <VBox class="vendorRegistrationFormSection">
             <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Vendor Account Group" class="voGridLabel" />
-                    <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
+                    <Label text="Vendor Account Group" class="voGridLabel" required="true" />
+                    <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorAccountGrp}" enabled="true" items="{oDropdownModel>/vendortype}">
                         <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
                     </ComboBox>
                 </VBox>
             </l:Grid>
             <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Name 1" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+                    <Label text="Name 1" class="voGridLabel" required="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/name1}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 2" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/name2}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 3" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/name3}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Name 4" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/name4}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Search Term 1" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/searchTerm1}" enabled="true"  />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Search Term 2" class="voGridLabel" />
-                    <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
+                    <Input class="voInputText" value="{oSupplierDetailModel>/searchTerm2}" enabled="true"  />
                 </VBox>
             </l:Grid>
         </VBox>
@@ -43,20 +43,7 @@
                     <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Street" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oSupplierDetailModel>/vendorAddress/street}"
-                                maxLength="60"
-                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                                valueStateText="{i18n>ManFields}"
-                                change="oAddressChange"
-                                enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                liveChange="onAddingmandvalue"
-                            >
-                                <customData>
-                                    <core:CustomData key="target" value="street" />
-                                </customData>
-                            </Input>
+                            <Input class="voInputText" value="{oSupplierDetailModel>/street}" enabled="true"  />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="House Number" class="voGridLabel" required="true" />
