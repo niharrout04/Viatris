@@ -1,7 +1,5 @@
-<mvc:View
-    controllerName="viatrix.controller.VendorDetailOverview"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
+<mvc:View controllerName="viatrix.controller.VendorDetailOverview"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form"
     xmlns:tnt="sap.tnt"
@@ -11,9 +9,7 @@
     xmlns:uxap="sap.uxap"
     xmlns:layout="sap.ui.layout"
     xmlns:u="sap.ui.unified"
-    xmlns:grid="sap.ui.layout.cssgrid"
-    height="100%"
->
+    xmlns:grid="sap.ui.layout.cssgrid" height="100%">
     <Page showHeader="false" enableScrolling="false" class="sigPage sapUiSmallMarginEnd">
         <uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="false" showFooter="true" showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress" showAnchorBar="false" class=" sapUiTinyMarginTop sapUiSmallMarginBottom ">
             <uxap:sections>
@@ -312,7 +308,7 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:ObjectPageSection>
                 <uxap:ObjectPageSection titleUppercase="false" id="companyCodeInformationSection" title="Company Code Information" importance="Medium" class="uxapHeaderTitle">
-                <uxap:ObjectPageSubSection title="Company Code Information" titleUppercase="true" class="marginSection">
+                    <uxap:ObjectPageSubSection title="Company Code Information" titleUppercase="true" class="marginSection">
                         <VBox >
                             <Label text="Accounting and Correspondence Details 1" />
                             <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
@@ -425,7 +421,7 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:ObjectPageSection>
                 <uxap:ObjectPageSection titleUppercase="false" id="purchasingOrganizationInformationSection" title="Purchasing OrganizationInformation" importance="Medium" class="uxapHeaderTitle">
-                <uxap:ObjectPageSubSection title="Purchasing OrganizationInformation" titleUppercase="true" class="marginSection">
+                    <uxap:ObjectPageSubSection title="Purchasing OrganizationInformation" titleUppercase="true" class="marginSection">
                         <VBox >
                             <Label text="PURCHASING DETAILS 1" />
                             <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
@@ -537,7 +533,62 @@
                         </VBox>
                     </uxap:ObjectPageSubSection>
                 </uxap:ObjectPageSection>
-                
+                <uxap:ObjectPageSection>
+                    <uxap:ObjectPageSubSection>
+                        <Toolbar class="voToolBarTable">
+                            <VBox>
+                                <Title titleStyle="H5" text="{i18n>DocTableTitle}" class="voTitle sapUiTinyMarginButtom" />
+                                <Label text="{i18n>DocInfo}" class="sapUiTinyMarginTop" />
+                            </VBox>
+                            <ToolbarSpacer />
+                            <Button icon="sap-icon://add" text="{i18n>addRow}" tooltip="{i18n>addRow}" class="voBtnDefault" enabled="{oSupplierDetailModel>/isEditable}" press="handelAddCategoryFile" visible="{oSupplierDetailModel>/categoryUploadVisible}" />
+                            <!--visible="{oSupplierDetailModel>/categoryUploadVisible}"-->
+                        </Toolbar>
+                        <Table id="tableId4" mode="MultiSelect" class="sigTable" selectionChange="onDocSelect" items="{oSupplierDetailModel>/document}">
+                            <columns>
+                                <Column width="15%">
+                                    <Label design="Bold" text="{i18n>Doctyp}" />
+                                </Column>
+                                <Column width="40%">
+                                    <Label design="Bold" text="{i18n>DocSubType}" />
+                                </Column>
+                                <Column width="15%">
+                                    <Text text="{i18n>DocName}" />
+                                    <Label design="Bold" text="{i18n>DocName}" />
+                                </Column>
+                                <Column width="15%">
+                                    <Label design="Bold" text="{i18n>LastUpdate}" />
+                                </Column>
+                                <Column width="15%">
+                                    <Label design="Bold" text="{i18n>ExpiryDate}" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem class="documentrow">
+                                    <customData>
+                                        <core:CustomData key="mandatory" value="{parts: ['oSupplierDetailModel>documentType','oSupplierDetailModel>arcDocId'], formatter:'.formatter.setColorMandatory'}" writeToDom="true" />
+                                    </customData>
+                                    <cells>
+                                        <Text text="{path:'oSupplierDetailModel>documentType', formatter:'.formatter.setDocTypeMandatory'}" />
+                                        <HBox>
+                                            <Text text="{oSupplierDetailModel>documentSubType}" visible="{parts: ['oSupplierDetailModel>documentType'], formatter:'.formatter.setDocSubTypeVisibility'}" />
+                                            <ComboBox class="sigComboBox" width="100%" selectedKey="{oSupplierDetailModel>documentSubType}" items="{oDropdownModel>/categoryDocument}" visible="{parts: ['oSupplierDetailModel>documentType','oSupplierDetailModel>arcDocId'], formatter:'.formatter.setDocSubTypeDropDown'}" change="onCategorySelect" valueState="{oSupplierDetailModel>documentSubTypeState}">
+                                                <core:Item key="{oDropdownModel>documentSubType}" text="{oDropdownModel>documentSubType}" />
+                                            </ComboBox>
+                                        </HBox>
+                                        <Text text="{oSupplierDetailModel>fileName}" />
+                                        <Text text="{path:'oSupplierDetailModel>updatedOn',formatter:'.formatter.formatDate'}" />
+                                        <DatePicker class="sigComboBox" dateValue="{oSupplierDetailModel>expiryDate}" displayFormat="dd-MMM-yyyy" valueFormat="dd/MM/yyyy" width="100%" change="onExpiryDateChange" minDate="{MinDate>/Value}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+
+
+
             </uxap:sections>
         </uxap:ObjectPageLayout>
     </Page>
