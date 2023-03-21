@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
     <VBox>
-        <Label text="Tax Details" class="vendorRegistrationFormSectionLabel" />
+        <Label text="{i18n>taxDetails}" class="vendorRegistrationFormSectionLabel" />
         <VBox class="vendorRegistrationFormSection sapUiTinyMarginTop">
             <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax Number 1" class="voGridLabel" />
+                    <Label text="{i18n>taxNumber1}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax number 2" class="voGridLabel" />
+                    <Label text="{i18n>taxNumber2}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/eccVendorNumber}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax number 3" class="voGridLabel" />
+                    <Label text="{i18n>taxNumber4}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax Number 4" class="voGridLabel" />
+                    <Label text="{i18n>taxNumber4}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax Number 5" class="voGridLabel" />
+                    <Label text="{i18n>taxNumber5}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax Number Type" class="voGridLabel" />
+                    <Label text="{i18n>taxNumberType}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax type" class="voGridLabel" />
+                    <Label text="{i18n>taxType}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Tax Juridiction" required="true" class="voGridLabel" />
+                    <Label text="{i18n>taxJurisdiction}" required="true" class="voGridLabel" />
                     <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
                         <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
                     </ComboBox>
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="VAT Registration Number" class="voGridLabel" />
+                    <Label text="{i18n>VATRegistrationNumber}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/businessPartnerCode}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Transport Zone" class="voGridLabel" />
+                    <Label text="{i18n>transportZone}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/vendorName}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="POD Relevant" class="voGridLabel" />
+                    <Label text="{i18n>PODRelevant}}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Date of Birth" class="voGridLabel" />
+                    <Label text="{i18n>doB}}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Industry" class="voGridLabel" />
+                    <Label text="{i18n>industry}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
-                    <Label text="Vendor Calendar" class="voGridLabel" />
+                    <Label text="{i18n>vendorCalender}" class="voGridLabel" />
                     <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                 </VBox>
             </l:Grid>

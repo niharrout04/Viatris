@@ -7,7 +7,7 @@
                 <VBox>
                     <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Company Code" class="voGridLabel" required="true" />
+                            <Label text="{i18n>companyCode}" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
                                 value="{oSupplierDetailModel>/vendorAddress/street}"
@@ -24,7 +24,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Reconciliation Account" class="voGridLabel" />
+                            <Label text="{i18n>reconAccount}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street2}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street2" />
@@ -32,7 +32,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Interest Ind." class="voGridLabel" />
+                            <Label text="{i18n>interestInd}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street3}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street3" />
@@ -40,7 +40,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="W.Tax Code " class="voGridLabel" />
+                            <Label text="{i18n>wtax}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street4}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street4" />
@@ -48,7 +48,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="WH. Tax Country" class="voGridLabel" />
+                            <Label text="{i18n>wTaxCountry}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street5}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street5" />
@@ -56,7 +56,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Recipient Type" class="voGridLabel" required="true" />
+                            <Label text="{i18n>recipientType}" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
                                 value="{oSupplierDetailModel>/vendorAddress/city}"
@@ -73,7 +73,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Exemption No" class="voGridLabel" required="true" />
+                            <Label text="{i18n>exempNo}" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
                                 value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
@@ -88,22 +88,22 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Valid Until" class="voGridLabel" required="true" />
+                            <Label text="{i18n>validUntil}" class="voGridLabel" required="true" />
                             <!-- Date picker  -->
                             <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Exemption Authority" class="voGridLabel" required="true" />
+                            <Label text="{i18n>exempAuthority}" class="voGridLabel" required="true" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Payment Terms" class="voGridLabel" />
+                            <Label text="{i18n>payTerms}" class="voGridLabel" />
                             <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
                                 <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
                             </ComboBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Tolerance Group" class="voGridLabel" />
+                            <Label text="{i18n>toleranceGroup}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/website}" maxLength="2048" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="website" />
@@ -111,15 +111,15 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Payment Methods" class="voGridLabel" />
+                            <Label text="{i18n>payMethods}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Payment Block" class="voGridLabel" />
+                            <Label text="{i18n>payBlock}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="House Bank" class="voGridLabel" />
+                            <Label text="{i18n>houseBank}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/website}" maxLength="2048" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="website" />
@@ -127,13 +127,13 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Grouping Key" class="voGridLabel" />
+                            <Label text="{i18n>groupKey}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                         </VBox>
                     </l:Grid>
                     <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Accounting Clerk" class="voGridLabel" />
+                            <Label text="{i18n>accClerk}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street4}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street4" />
@@ -141,7 +141,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Accounting Clerk’s Fax" class="voGridLabel" />
+                            <Label text="{i18n>accClerkFax}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street5}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street5" />
@@ -149,7 +149,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Acting Clerk’s Telephone" class="voGridLabel" required="true" />
+                            <Label text="{i18n>actClerkTele}" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
                                 value="{oSupplierDetailModel>/vendorAddress/city}"
@@ -166,7 +166,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Clerk at  Supplier" class="voGridLabel" required="true" />
+                            <Label text="{i18n>clerkSupplier}" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
                                 value="{oSupplierDetailModel>/vendorAddress/cityPostalCode}"
@@ -181,21 +181,21 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Planning Group" class="voGridLabel" required="true" />
+                            <Label text="{i18n>planGroup}" class="voGridLabel" required="true" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Minority Indicator" class="voGridLabel" required="true" />
+                            <Label text="{i18n>minorIndicator}" class="voGridLabel" required="true" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/email}" enabled="true" type="Email" />
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Clerk Email Address" class="voGridLabel" />
+                            <Label text="{i18n>clerkMail}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/fax}" maxLength="40" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                         </VBox>
                     </l:Grid>
                     <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Reconciliation Account in General Ledger" class="voGridLabel" />
+                            <Label text="{i18n>reconAccGeneral}" class="voGridLabel" />
                             <Input class="voInputText" value="{oSupplierDetailModel>/vendorAddress/street4}" maxLength="40" change="oAddressChange" enabled="{parts: ['oSupplierDetailModel>/notExtended','oSupplierDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="street4" />
@@ -203,13 +203,13 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Check Flag for Double Invoices or Credit Memo" class="voGridLabel" />
+                            <Label text="{i18n>checkDoubleFlagMemo}" class="voGridLabel" />
                             <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
                                 <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
                             </ComboBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Company Code Deletion Block" class="voGridLabel" required="true" />
+                            <Label text="{i18n>compDeletionBlock}" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
                                 value="{oSupplierDetailModel>/vendorAddress/city}"
@@ -226,7 +226,7 @@
                             </Input>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
-                            <Label text="Sort Key for  Payment Assignment" class="voGridLabel" required="true" />
+                            <Label text="{i18n>sortkeyPay}" class="voGridLabel" required="true" />
                             <ComboBox class="voComboBox" width="100%" selectedKey="{oSupplierDetailModel>/vendorType}" enabled="true" items="{oDropdownModel>/vendortype}">
                                 <core:Item key="{oDropdownModel>code}" text="{oDropdownModel>description}" />
                             </ComboBox>
@@ -237,7 +237,7 @@
         </VBox>
         </VBox>
         <VBox alignItems="End" justifyContent="End">
-            <Button text="Add Section" icon="sap-icon://positive" press="onClickAddSectionCompanyCodeInformation" />
+            <Button text="{i18n>addSection}" icon="sap-icon://positive" press="onClickAddSectionCompanyCodeInformation" />
         </VBox>
     </VBox>
 </core:FragmentDefinition>
