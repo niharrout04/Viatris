@@ -206,8 +206,8 @@ sap.ui.define([
                         
                         oVendorDetailModel.setProperty("/", data.data);
                         console.log("success1 "+oVendorDetailModel.getProperty("/name1"));
-                        var arr= oVendorDetailModel.getProperty("/address");
-                        console.log("success 333"+arr[0].city);
+                        var arr= oVendorDetailModel.getProperty("/address/mainAddress/street");
+                        console.log("success 333"+arr);
 
                     },
                     error: function (oResp) {
