@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
     <VBox>
         <VBox class="vendorRegistrationFormSection">
             <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
@@ -29,11 +31,11 @@
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Search Term 1" class="voGridLabel" />
-                    <Input class="voInputText" value="{oVendorDetailModel>/searchTerm1}" enabled="true"  />
+                    <Input class="voInputText" value="{oVendorDetailModel>/searchTerm1}" enabled="true" />
                 </VBox>
                 <VBox class="sapUiSmallMarginTop">
                     <Label text="Search Term 2" class="voGridLabel" />
-                    <Input class="voInputText" value="{oVendorDetailModel>/searchTerm2}" enabled="true"  />
+                    <Input class="voInputText" value="{oVendorDetailModel>/searchTerm2}" enabled="true" />
                 </VBox>
             </l:Grid>
         </VBox>
@@ -85,14 +87,7 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Country" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/address/mainAddress/country}"
-                                liveChange="validatePostalCode"
-                                valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
-                                valueStateText="{i18n>ManFields}"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/address/mainAddress/country}" liveChange="validatePostalCode" valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}" valueStateText="{i18n>ManFields}" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="cityPostalCode" />
                                 </customData>
@@ -100,16 +95,7 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Timezone" class="voGridLabel" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/address/mainAddress/timeZone}"
-                                maxLength="60"
-                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                                valueStateText="{i18n>ManFields}"
-                                change="oAddressChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                liveChange="onAddingmandvalue"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/address/mainAddress/timeZone}" maxLength="60" valueState="{oMandatoryModel>/vendorAddress/streetState}" valueStateText="{i18n>ManFields}" change="oAddressChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" liveChange="onAddingmandvalue">
                                 <customData>
                                     <core:CustomData key="target" value="street" />
                                 </customData>
@@ -117,16 +103,7 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Language" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/address/mainAddress/language}"
-                                maxLength="60"
-                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                                valueStateText="{i18n>ManFields}"
-                                change="oAddressChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                liveChange="onAddingmandvalue"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/address/mainAddress/language}" maxLength="60" valueState="{oMandatoryModel>/vendorAddress/streetState}" valueStateText="{i18n>ManFields}" change="oAddressChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" liveChange="onAddingmandvalue">
                                 <customData>
                                     <core:CustomData key="target" value="street" />
                                 </customData>
@@ -135,67 +112,24 @@
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="First Telephone Number" class="voGridLabel" required="true" />
                             <HBox renderType="Bare">
-                                <ComboBox
-                                    class="voComboBox"
-                                    width="50%"
-                                    items="{oDropdownModel>/phoneCountryCode}"
-                                    showSecondaryValues="true"
-                                    change="onChangeCountryCode"
-                                    selectedKey="{oVendorDetailModel>/address/mainAddress}"
-                                    valueState="{oMandatoryModel>/phoneCountrycodeState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    selectionChange="onAddingmandvalue"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                >
+                                <ComboBox class="voComboBox" width="50%" items="{oDropdownModel>/phoneCountryCode}" showSecondaryValues="true" change="onChangeCountryCode" selectedKey="{oVendorDetailModel>/address/mainAddress}" valueState="{oMandatoryModel>/phoneCountrycodeState}" valueStateText="{i18n>ManFields}" selectionChange="onAddingmandvalue" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                     <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                                 </ComboBox>
-                                <Input
-                                    class="voInputText"
-                                    value="{oVendorDetailModel>/address/mainAddress/telephoneNumber}"
-                                    valueState="{oMandatoryModel>/mobileNumberState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    liveChange="onPhoneNumberChange"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                />
+                                <Input class="voInputText" value="{oVendorDetailModel>/address/mainAddress/telephoneNumber}" valueState="{oMandatoryModel>/mobileNumberState}" valueStateText="{i18n>ManFields}" liveChange="onPhoneNumberChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                             </HBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Mobile Phone" class="voGridLabel" />
                             <HBox renderType="Bare">
-                                <ComboBox
-                                    class="voComboBox"
-                                    width="50%"
-                                    items="{oDropdownModel>/phoneCountryCode}"
-                                    showSecondaryValues="true"
-                                    change="onChangeCountryCode"
-                                    selectedKey="{oVendorDetailModel>/address/mainAddress}"
-                                    valueState="{oMandatoryModel>/phoneCountrycodeState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    selectionChange="onAddingmandvalue"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                >
+                                <ComboBox class="voComboBox" width="50%" items="{oDropdownModel>/phoneCountryCode}" showSecondaryValues="true" change="onChangeCountryCode" selectedKey="{oVendorDetailModel>/address/mainAddress}" valueState="{oMandatoryModel>/phoneCountrycodeState}" valueStateText="{i18n>ManFields}" selectionChange="onAddingmandvalue" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                     <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                                 </ComboBox>
-                                <Input
-                                    class="voInputText"
-                                    value="{oVendorDetailModel>/address/mainAddress/mobileNumber}"
-                                    valueState="{oMandatoryModel>/mobileNumberState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    liveChange="onPhoneNumberChange"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                />
+                                <Input class="voInputText" value="{oVendorDetailModel>/address/mainAddress/mobileNumber}" valueState="{oMandatoryModel>/mobileNumberState}" valueStateText="{i18n>ManFields}" liveChange="onPhoneNumberChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                             </HBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="First Fax Number" class="voGridLabel" />
-                            <ComboBox
-                                class="voComboBox"
-                                width="100%"
-                                items="{oDropdownModel>/region}"
-                                selectedKey="{oVendorDetailModel>/address/mainAddress/faxNumber}"
-                                change="oRegionChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <ComboBox class="voComboBox" width="100%" items="{oDropdownModel>/region}" selectedKey="{oVendorDetailModel>/address/mainAddress/faxNumber}" change="oRegionChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
                             </ComboBox>
                         </VBox>
@@ -209,14 +143,7 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Standard Communication Method" class="voGridLabel" />
-                            <ComboBox
-                                class="voComboBox"
-                                width="100%"
-                                items="{oDropdownModel>/region}"
-                                selectedKey="{oVendorDetailModel>/address/mainAddress/standardCommMethod}"
-                                change="oRegionChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <ComboBox class="voComboBox" width="100%" items="{oDropdownModel>/region}" selectedKey="{oVendorDetailModel>/address/mainAddress/standardCommMethod}" change="oRegionChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
                             </ComboBox>
                         </VBox>
@@ -238,16 +165,7 @@
                     <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Country" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/address/orderingAddress/country}"
-                                maxLength="60"
-                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                                valueStateText="{i18n>ManFields}"
-                                change="oAddressChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                liveChange="onAddingmandvalue"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/address/orderingAddress/country}" maxLength="60" valueState="{oMandatoryModel>/vendorAddress/streetState}" valueStateText="{i18n>ManFields}" change="oAddressChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" liveChange="onAddingmandvalue">
                                 <customData>
                                     <core:CustomData key="target" value="street" />
                                 </customData>
@@ -287,27 +205,13 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Address Line 4" class="voGridLabel" required="true" />
-                            <ComboBox
-                                class="voComboBox"
-                                width="100%"
-                                items="{oDropdownModel>/region}"
-                                selectedKey="{oVendorDetailModel>/address/orderingAddress/addressLine4}"
-                                change="oRegionChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <ComboBox class="voComboBox" width="100%" items="{oDropdownModel>/region}" selectedKey="{oVendorDetailModel>/address/orderingAddress/addressLine4}" change="oRegionChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
                             </ComboBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Address Line 5" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/address/orderingAddress/addressLine5}"
-                                liveChange="validatePostalCode"
-                                valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
-                                valueStateText="{i18n>ManFields}"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/address/orderingAddress/addressLine5}" liveChange="validatePostalCode" valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}" valueStateText="{i18n>ManFields}" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="cityPostalCode" />
                                 </customData>
@@ -328,28 +232,10 @@
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Telephone Number" class="voGridLabel" />
                             <HBox renderType="Bare">
-                                <ComboBox
-                                    class="voComboBox"
-                                    width="50%"
-                                    items="{oDropdownModel>/phoneCountryCode}"
-                                    showSecondaryValues="true"
-                                    change="onChangeCountryCode"
-                                    selectedKey="{oVendorDetailModel>/address/orderingAddress}"
-                                    valueState="{oMandatoryModel>/phoneCountrycodeState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    selectionChange="onAddingmandvalue"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                >
+                                <ComboBox class="voComboBox" width="50%" items="{oDropdownModel>/phoneCountryCode}" showSecondaryValues="true" change="onChangeCountryCode" selectedKey="{oVendorDetailModel>/address/orderingAddress}" valueState="{oMandatoryModel>/phoneCountrycodeState}" valueStateText="{i18n>ManFields}" selectionChange="onAddingmandvalue" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                     <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                                 </ComboBox>
-                                <Input
-                                    class="voInputText"
-                                    value="{oVendorDetailModel>/address/orderingAddress}"
-                                    valueState="{oMandatoryModel>/mobileNumberState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    liveChange="onPhoneNumberChange"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                />
+                                <Input class="voInputText" value="{oVendorDetailModel>/address/orderingAddress}" valueState="{oMandatoryModel>/mobileNumberState}" valueStateText="{i18n>ManFields}" liveChange="onPhoneNumberChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                             </HBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
@@ -372,16 +258,7 @@
                     <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="2">
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="{i18n>st1}" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/remittanceAddress/paymentTerms}"
-                                maxLength="60"
-                                valueState="{oMandatoryModel>/vendorAddress/streetState}"
-                                valueStateText="{i18n>ManFields}"
-                                change="oAddressChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                liveChange="onAddingmandvalue"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/remittanceAddress/paymentTerms}" maxLength="60" valueState="{oMandatoryModel>/vendorAddress/streetState}" valueStateText="{i18n>ManFields}" change="oAddressChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" liveChange="onAddingmandvalue">
                                 <customData>
                                     <core:CustomData key="target" value="street" />
                                 </customData>
@@ -421,16 +298,7 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="{i18n>City}" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/remittanceAddress/city}"
-                                maxLength="40"
-                                valueState="{oMandatoryModel>/vendorAddress/cityState}"
-                                valueStateText="{i18n>ManFields}"
-                                change="oAddressChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                liveChange="onAddingmandvalue"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/remittanceAddress/city}" maxLength="40" valueState="{oMandatoryModel>/vendorAddress/cityState}" valueStateText="{i18n>ManFields}" change="oAddressChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" liveChange="onAddingmandvalue">
                                 <customData>
                                     <core:CustomData key="target" value="city" />
                                 </customData>
@@ -438,14 +306,7 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="{i18n>Pincode}" class="voGridLabel" required="true" />
-                            <Input
-                                class="voInputText"
-                                value="{oVendorDetailModel>/remittanceAddress/cityPostalCode}"
-                                liveChange="validatePostalCode"
-                                valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
-                                valueStateText="{i18n>ManFields}"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <Input class="voInputText" value="{oVendorDetailModel>/remittanceAddress/cityPostalCode}" liveChange="validatePostalCode" valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}" valueStateText="{i18n>ManFields}" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <customData>
                                     <core:CustomData key="target" value="cityPostalCode" />
                                 </customData>
@@ -453,46 +314,17 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="{i18n>Country}" class="voGridLabel" required="true" />
-                            <ComboBox
-                                class="voComboBox"
-                                width="100%"
-                                items="{oDropdownModel>/country}"
-                                change="onCountrySelect"
-                                selectedKey="{oVendorDetailModel>/remittanceAddress/countryKey}"
-                                valueState="{oMandatoryModel>/vendorAddress/countryKeyState}"
-                                valueStateText="{i18n>ManFields}"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                showSecondaryValues="true"
-                                selectionChange="onAddingmandvalue"
-                            >
+                            <ComboBox class="voComboBox" width="100%" items="{oDropdownModel>/country}" change="onCountrySelect" selectedKey="{oVendorDetailModel>/remittanceAddress/countryKey}" valueState="{oMandatoryModel>/vendorAddress/countryKeyState}" valueStateText="{i18n>ManFields}" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" showSecondaryValues="true" selectionChange="onAddingmandvalue">
                                 <core:ListItem key="{oDropdownModel>countryKey}" text="{oDropdownModel>countryKey}" additionalText="{oDropdownModel>countryName}" />
                             </ComboBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="{i18n>CompanyPhone}" class="voGridLabel" required="true" />
                             <HBox renderType="Bare">
-                                <ComboBox
-                                    class="voComboBox"
-                                    width="50%"
-                                    items="{oDropdownModel>/phoneCountryCode}"
-                                    showSecondaryValues="true"
-                                    change="onChangeCountryCode"
-                                    selectedKey="{oVendorDetailModel>/remittanceAddress}"
-                                    valueState="{oMandatoryModel>/phoneCountrycodeState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    selectionChange="onAddingmandvalue"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                >
+                                <ComboBox class="voComboBox" width="50%" items="{oDropdownModel>/phoneCountryCode}" showSecondaryValues="true" change="onChangeCountryCode" selectedKey="{oVendorDetailModel>/remittanceAddress}" valueState="{oMandatoryModel>/phoneCountrycodeState}" valueStateText="{i18n>ManFields}" selectionChange="onAddingmandvalue" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                     <core:ListItem key="{oDropdownModel>countryCode}" text="{oDropdownModel>countryCode}" additionalText="{oDropdownModel>countryKey}" />
                                 </ComboBox>
-                                <Input
-                                    class="voInputText"
-                                    value="{oVendorDetailModel>/remittanceAddress}"
-                                    valueState="{oMandatoryModel>/mobileNumberState}"
-                                    valueStateText="{i18n>ManFields}"
-                                    liveChange="onPhoneNumberChange"
-                                    enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                                />
+                                <Input class="voInputText" value="{oVendorDetailModel>/remittanceAddress}" valueState="{oMandatoryModel>/mobileNumberState}" valueStateText="{i18n>ManFields}" liveChange="onPhoneNumberChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}" />
                             </HBox>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
@@ -509,20 +341,53 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="{i18n>Region}" class="voGridLabel" />
-                            <ComboBox
-                                class="voComboBox"
-                                width="100%"
-                                items="{oDropdownModel>/region}"
-                                selectedKey="{oVendorDetailModel>/remittanceAddress/region}"
-                                change="oRegionChange"
-                                enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}"
-                            >
+                            <ComboBox class="voComboBox" width="100%" items="{oDropdownModel>/region}" selectedKey="{oVendorDetailModel>/remittanceAddress/region}" change="oRegionChange" enabled="{parts: ['oVendorDetailModel>/notExtended','oVendorDetailModel>/isChanged'], formatter:'.formatter.setInputenbled'}">
                                 <core:Item key="{oDropdownModel>regionKey}" text="{oDropdownModel>regionName}" />
                             </ComboBox>
                         </VBox>
                     </l:Grid>
                 </VBox>
             </Panel>
+        </VBox>
+
+        <VBox class="sapUiLargeMarginTop">
+        <Toolbar class="voToolBarTable">
+                <Title titleStyle="H5" text="Contact Details" class="voTitle sapUiTinyMarginButtom " />
+            <ToolbarSpacer />
+            <Button icon="sap-icon://add" text="{i18n>addRow}" tooltip="{i18n>addRow}" class="voBtnDefault" enabled="{oSupplierDetailModel>/isEditable}" press="handelAddCategoryFile" visible="{oSupplierDetailModel>/categoryUploadVisible}" />
+        </Toolbar>
+            <Table class="sigTable" selectionChange="onDocSelect" items="{oVendorDetailModel>/contacts}">
+                <columns>
+                    <Column width="20%">
+                        <Label design="Bold" text="{i18n>firstName}" />
+                    </Column>
+                    <Column width="20%">
+                        <Label design="Bold" text="{i18n>name}" />
+                    </Column>
+                    <Column width="20%">
+                        <Text text="{i18n>DocName}" />
+                        <Label design="Bold" text="{i18n>telephone}" />
+                    </Column>
+                    <Column width="20%">
+                        <Label design="Bold" text="{i18n>department}" />
+                    </Column>
+                    <Column width="20%">
+                        <Label design="Bold" text="{i18n>function}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem class="documentrow">
+
+                        <cells>
+                            <Input class="voInputText" value="{oVendorDetailModel>firstName}" enabled="true" />
+                            <Input class="voInputText" value="{oVendorDetailModel>name}" enabled="true" />
+                            <Input class="voInputText" value="{oVendorDetailModel>telephone}" enabled="true" />
+                            <Input class="voInputText" value="{oVendorDetailModel>department}" enabled="true" />
+                            <Input class="voInputText" value="{oVendorDetailModel>contactFunction}" enabled="true" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
         </VBox>
     </VBox>
 </core:FragmentDefinition>
