@@ -26,6 +26,19 @@ sap.ui.define([
                 var history= History.getInstance();
                 console.log("history- "+history.aHistory);
 
+                var topNavigationBreadCrumb = this.getView().byId("topNavigation");
+                for(let i=0;i<history.aHistory.length-1;i++){
+                    let tLink= new sap.m.Link({
+                        press: "onPress",
+                        text: "Search Existing Vendor"
+                    }).addStyleClass("TopNavigationPastLink");
+                    topNavigationBreadCrumb.addLink(tLink);
+                }
+                let cLink= new sap.m.Link({
+                    text: history.aHistory[history.aHistory.length-1]
+                });
+                topNavigationBreadCrumb.setCurrentLocationText(history.aHistory[history.aHistory.length-1]);
+
 
                 var oActivityLog = this.getOwnerComponent().getModel("oActivityLog");
                 this.oActivityLog = oActivityLog;
@@ -45,14 +58,20 @@ sap.ui.define([
                 oActivityLog.setProperty("/word1","General");
                 oActivityLog.setProperty("/word2","Information");
 
-
-                console.log(sap.ui.core.Element.getMetadata());
+                var custDate = new Date();
+                custDate.setDate(custDate.getDate() + 30);
+                this.getView().setModel(new sap.ui.model.json.JSONModel({
+                    "Value": custDate
+                }), "MinDate");
+                // oVendorDetailModel.setProperty("/companyCodeInfo/validUntil", custDate);
+                // oVendorDetailModel.refresh();
+                console.log("valid until"+ oSupplierDetailModel.getProperty("/validUntil"));
 
                 this._oWizard = this.byId("vendorRegistrationFormWizard");
                 this._iSelectedStepIndex = 0;
                 this._oSelectedStep = this._oWizard.getSteps()[this._iSelectedStepIndex];
                 this.handleButtonsVisibility();
-                this.getVendorDetail();
+                //this.getVendorDetail();
             },
 
             onTestNavigate: function(){
@@ -94,12 +113,7 @@ sap.ui.define([
 
                 var oSupplierDetailModel = this.oSupplierDetailModel;
                 var oVendorDetailModel = this.oVendorDetailModel;
-                console.log("name 1= "+oSupplierDetailModel.getProperty("/street"));
-                console.log("name 1= "+oSupplierDetailModel.getProperty("/companyCodeInfo"));
-                var arrCompany = oSupplierDetailModel.getProperty("/companyCodeInfo");
-                console.log("arrCompany= "+arrCompany);
-                console.log("test = "+oSupplierDetailModel.getProperty("/test"));
-
+                console.log("valid until"+ oSupplierDetailModel.getProperty("/validUntil"));
 
 
                 this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
@@ -204,6 +218,28 @@ sap.ui.define([
                     type: "GET",
                     success: function (data) {
                         
+                        oVendorDetailModel.setProperty("/", data.data);
+                        console.log("success1 "+oVendorDetailModel.getProperty("/name1"));
+                        var arr= oVendorDetailModel.getProperty("/address/mainAddress/street");
+                        console.log("success 333"+arr);
+
+                    },
+                    error: function (oResp) {
+                        MessageBox.error("Error" + oResp.responseText);
+                    }
+                })
+            },
+            postVendorDetails: function(){
+                var oVendorDetailModel = this.oVendorDetailModel;
+                var supplierData = oVendorDetailModel.getData();
+                    var oData = jQuery.extend(true, {}, supplierData);
+                var sUrl = "/vendorDetails/createVendorDetails" ;
+                jQuery.ajax({
+                    url: sUrl,
+                    method: "POST",
+                    data: JSON.stringify(oData),
+                    contentType: "application/json; charset=UTF-8",
+                    success: function (data) {
                         oVendorDetailModel.setProperty("/", data.data);
                         console.log("success1 "+oVendorDetailModel.getProperty("/name1"));
                         var arr= oVendorDetailModel.getProperty("/address/mainAddress/street");

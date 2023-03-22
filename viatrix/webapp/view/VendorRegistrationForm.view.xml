@@ -3,7 +3,7 @@
         <content>
             <VBox>
             <core:Fragment fragmentName="viatrix.fragment.TopNavigation.CustomizedBreadcrumb" type="XML" />
-                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd sapUiLargeMarginTop">
+                <Toolbar class="voHideUnderline voToolBarlabel sapUiMediumMarginBeginEnd sapUiSmallMarginTop">
                     <Title titleStyle="H3" text="Vendor Registration Form" class="voTitle" />
                     <ToolbarSpacer />
                 </Toolbar>

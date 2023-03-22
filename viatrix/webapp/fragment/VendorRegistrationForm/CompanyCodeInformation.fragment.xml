@@ -50,7 +50,7 @@
                             <Label text="Recipient Type" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
-                                value="{oVendorDetailModel>/recipientType}"
+                                value="{oVendorDetailModel>recipientType}"
                                 maxLength="40"
                                 valueState="{oMandatoryModel>/vendorAddress/cityState}"
                                 valueStateText="{i18n>ManFields}"
@@ -67,7 +67,7 @@
                             <Label text="Exemption No" class="voGridLabel" required="true" />
                             <Input
                                 class="voInputText"
-                                value="{oVendorDetailModel>/exemptionNo}"
+                                value="{oVendorDetailModel>exemptionNo}"
                                 liveChange="validatePostalCode"
                                 valueState="{oMandatoryModel>/vendorAddress/cityPostalCodeState}"
                                 valueStateText="{i18n>ManFields}"
@@ -80,8 +80,9 @@
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Valid Until" class="voGridLabel" required="true" />
-                            <!-- Date picker  -->
-                            <Input class="voInputText" value="{oVendorDetailModel>validUntil}" enabled="true" type="Email" />
+                            
+                            <!-- <Input class="voInputText" value="{oVendorDetailModel>validUntil}" enabled="true" type="Email" /> -->
+                            <DatePicker class="voComboBox" dateValue="{oVendorDetailModel>validUntil}" displayFormat="dd-MMM-yyyy" valueFormat="dd/MM/yyyy" width="100%" change="onExpiryDateChange" minDate="{MinDate>/Value}"/>
                         </VBox>
                         <VBox class="sapUiSmallMarginTop">
                             <Label text="Exemption Authority" class="voGridLabel" required="true" />
