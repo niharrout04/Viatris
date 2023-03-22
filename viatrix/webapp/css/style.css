@@ -737,6 +737,27 @@
     color: #1D1D1D;
 }
 
+/* Top Navigation (Breadcrumbs) */
+.TopNavigationPastLink{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #404040;
+}
+.TopNavigationCurrentLink{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #404040;
+    opacity: 50%;
+}
+.topNaviagtion .sapMBreadcrumbsCurrentLocation {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #404040;
+    opacity: 50%;
+}
 
 
 

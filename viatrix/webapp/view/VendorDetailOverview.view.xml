@@ -308,8 +308,8 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:ObjectPageSection>
                 <uxap:ObjectPageSection titleUppercase="false" id="companyCodeInformationSection" title="Company Code Information" importance="Medium" class="uxapHeaderTitle">
-                    <uxap:ObjectPageSubSection title="Company Code Information" titleUppercase="true" class="marginSection">
-                        <VBox >
+                        <uxap:ObjectPageSubSection title="Company Code Information" titleUppercase="true" class="marginSection">
+                        <VBox>
                             <Label text="Accounting and Correspondence Details 1" />
                             <grid:CSSGrid gridTemplateRows="1fr 1fr" gridTemplateColumns="20% 20% 20% 20% 20%" gridGap="1rem">
                                 <VBox class="demoBox">

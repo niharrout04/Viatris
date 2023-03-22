@@ -7,6 +7,6 @@
          <Button text="{i18n>Preview}" type="Default" class="voFormBtnDefault sapUiTinyMarginBegin" visible="{oButtonmodel>/previewButtonVisible}" press="onPrintVendorDetails"/>
         <Button text="Save As Draft" type="Emphasized" class="voFormBtnEmphasized sapUiTinyMarginBegin" visible="{oButtonmodel>/saveButtonVisible}" press="SaveVendorDetails"/>
         <Button text="{i18n>Next}" type="Emphasized" class="voFormBtnEmphasized sapUiTinyMarginBegin" visible="{oButtonmodel>/nextButtonVisible}" press="onDialogNextButton" />
-        <Button text="{i18n>Submit}" type="Emphasized" class="voFormBtnEmphasized sapUiTinyMarginBegin" visible="{oButtonmodel>/submitButtonVisible}" press="Submit" />
+        <Button text="{i18n>Submit}" type="Emphasized" class="voFormBtnEmphasized sapUiTinyMarginBegin" visible="{oButtonmodel>/submitButtonVisible}" press="postVendorDetails" />
     </Toolbar>
 </core:FragmentDefinition>

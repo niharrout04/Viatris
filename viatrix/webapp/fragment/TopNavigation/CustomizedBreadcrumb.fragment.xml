@@ -1,14 +1,9 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:c="viatrix.controls">
-<Breadcrumbs currentLocationText="Laptop" separatorStyle="Slash">
-                <!-- <Icon src="sap-icon://home" /> -->
-				<c:CustomizedBreadcrumb id="testtest" text="test   test" >
-					<c:leftIcon src="sap-icon://flight" />
-				</c:CustomizedBreadcrumb>
-				<Link press="onPress" text="Products" />
-				<Link press="onPress" text="Suppliers"/>
-				<Link press="onPress" text="Titanium"/>
-				<Link press="onPress" text="Ultra portable"/>
-				<Link press="onPress" text="12 inch"/>
-				<Link press="onPress" text="Super portable deluxe" />
-			</Breadcrumbs>
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:c="viatrix.controls">
+	<Breadcrumbs id="topNavigation"  separatorStyle="Slash" class="topNaviagtion sapUiLargeMarginTop sapUiMediumMarginBegin">
+		<c:CustomizedBreadcrumb id="testtest" />
+	</Breadcrumbs>
+	<!-- <core:Icon src="sap-icon://home" /> -->
 </core:FragmentDefinition>

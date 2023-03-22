@@ -13,16 +13,44 @@ sap.ui.define([
             formatter: formatter,
 
             onInit: function () {
+
+
                 this.oComponent = this.getOwnerComponent();
                 this.router = this.getOwnerComponent().getRouter();
+
+
+                this.sResolvedURI = this.getOwnerComponent().getManifestObject().resolveUri("");
+                this.sResolvedURI = this.sResolvedURI === "./" ? "" : this.sResolvedURI;
+
+
                 var history= History.getInstance();
                 console.log("history- "+history.aHistory);
+
+                var topNavigationBreadCrumb = this.getView().byId("topNavigation");
+                for(let i=0;i<history.aHistory.length-1;i++){
+                    let tLink= new sap.m.Link({
+                        press: "onPress",
+                        text: "Search Existing Vendor"
+                    }).addStyleClass("TopNavigationPastLink");
+                    topNavigationBreadCrumb.addLink(tLink);
+                }
+                let cLink= new sap.m.Link({
+                    text: history.aHistory[history.aHistory.length-1]
+                });
+                topNavigationBreadCrumb.setCurrentLocationText(history.aHistory[history.aHistory.length-1]);
 
 
                 var oActivityLog = this.getOwnerComponent().getModel("oActivityLog");
                 this.oActivityLog = oActivityLog;
                 var oButtonmodel = this.getOwnerComponent().getModel("oButtonmodel");
                 this.oButtonmodel = oButtonmodel;
+                var oVendorDetailModel = this.getOwnerComponent().getModel("oVendorDetailModel");
+                this.oVendorDetailModel = oVendorDetailModel;
+                var oSupplierDetailModel = this.getOwnerComponent().getModel("oSupplierDetailModel");
+                this.oSupplierDetailModel = oSupplierDetailModel;
+
+
+                oSupplierDetailModel.setProperty("/companyCodeInfo",[]);
 
 
 
@@ -30,13 +58,20 @@ sap.ui.define([
                 oActivityLog.setProperty("/word1","General");
                 oActivityLog.setProperty("/word2","Information");
 
-
-                console.log(sap.ui.core.Element.getMetadata());
+                var custDate = new Date();
+                custDate.setDate(custDate.getDate() + 30);
+                this.getView().setModel(new sap.ui.model.json.JSONModel({
+                    "Value": custDate
+                }), "MinDate");
+                // oVendorDetailModel.setProperty("/companyCodeInfo/validUntil", custDate);
+                // oVendorDetailModel.refresh();
+                console.log("valid until"+ oSupplierDetailModel.getProperty("/validUntil"));
 
                 this._oWizard = this.byId("vendorRegistrationFormWizard");
                 this._iSelectedStepIndex = 0;
                 this._oSelectedStep = this._oWizard.getSteps()[this._iSelectedStepIndex];
                 this.handleButtonsVisibility();
+                //this.getVendorDetail();
             },
 
             onTestNavigate: function(){
@@ -75,6 +110,12 @@ sap.ui.define([
                 this.handleButtonsVisibility();
             },
             onDialogNextButton: function () {
+
+                var oSupplierDetailModel = this.oSupplierDetailModel;
+                var oVendorDetailModel = this.oVendorDetailModel;
+                console.log("valid until"+ oSupplierDetailModel.getProperty("/validUntil"));
+
+
                 this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
                 // if (this._iSelectedStepIndex === 0) {
                 //     var oNextStep = this._oWizard.getSteps()[this._iSelectedStepIndex + 1];
@@ -136,10 +177,17 @@ sap.ui.define([
             },
             onClickAddSectionCompanyCodeInformation: function(oEvent){
                 var companyCodeInformationVbox = this.getView().byId("companyCodeInformationVbox");
-                var vbox1= new sap.m.VBox().addItem(new sap.m.Label({
+                var testPanel = this.getView().byId("panel1");
+                var idArray=["9","8","7"];
+                testPanel.clone("lk",idArray);
+
+                var vbox1= new sap.m.VBox()
+                   .addItem(new sap.m.Label({
                     text: "Company Code",
                     required: true
-                })).addItem(new sap.m.Input().addStyleClass("voInputText"));
+                })).addItem(new sap.m.Input({
+                    value: "{oVendorDetailModel>companyCode}"
+                }).addStyleClass("voInputText"));
                 var vbox2= new sap.m.VBox().addItem(new sap.m.Label({
                     text: "Reconciliation Account",
                     required: true
@@ -156,8 +204,52 @@ sap.ui.define([
                     headerText: "test successful!"
                 }).addStyleClass("vendorRegistrationFormPanel").addContent(mVbox);
 
-                companyCodeInformationVbox.addItem(mPanel);
+                // companyCodeInformationVbox.addItem(mPanel);
+                companyCodeInformationVbox.addItem(testPanel);
 
+            },
+            getVendorDetail: function(){
+                var oVendorDetailModel = this.oVendorDetailModel;
+
+                var sUrl = "/vendorDetails/getVendorDetails/VM000004" ;
+                // var url = that.sResolvedURI + "Viatris_Vendor_Onboarding" + sUrl;
+                jQuery.ajax({
+                    url: sUrl,
+                    type: "GET",
+                    success: function (data) {
+                        
+                        oVendorDetailModel.setProperty("/", data.data);
+                        console.log("success1 "+oVendorDetailModel.getProperty("/name1"));
+                        var arr= oVendorDetailModel.getProperty("/address/mainAddress/street");
+                        console.log("success 333"+arr);
+
+                    },
+                    error: function (oResp) {
+                        MessageBox.error("Error" + oResp.responseText);
+                    }
+                })
+            },
+            postVendorDetails: function(){
+                var oVendorDetailModel = this.oVendorDetailModel;
+                var supplierData = oVendorDetailModel.getData();
+                    var oData = jQuery.extend(true, {}, supplierData);
+                var sUrl = "/vendorDetails/createVendorDetails" ;
+                jQuery.ajax({
+                    url: sUrl,
+                    method: "POST",
+                    data: JSON.stringify(oData),
+                    contentType: "application/json; charset=UTF-8",
+                    success: function (data) {
+                        oVendorDetailModel.setProperty("/", data.data);
+                        console.log("success1 "+oVendorDetailModel.getProperty("/name1"));
+                        var arr= oVendorDetailModel.getProperty("/address/mainAddress/street");
+                        console.log("success 333"+arr);
+
+                    },
+                    error: function (oResp) {
+                        MessageBox.error("Error" + oResp.responseText);
+                    }
+                })
             }
         });
     });
