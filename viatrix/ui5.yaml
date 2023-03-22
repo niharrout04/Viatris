@@ -15,15 +15,6 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
-        backend:
-          - path: /Viatris_Vendor_Onboarding
-            destination: Viatris_Vendor_Onboarding
-            url: https://viatrisvendoronboarding.cfapps.eu10.hana.ondemand.com
-          - path: 
-            - /document
-            - /vendorDetails
-            destination: Viatris_Vendor_Onboarding
-            url: https://viatrisvendoronboarding.cfapps.eu10.hana.ondemand.com
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

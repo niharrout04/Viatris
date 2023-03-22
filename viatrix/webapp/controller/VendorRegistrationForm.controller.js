@@ -6,7 +6,7 @@ sap.ui.define([
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller,formatter,History) {
+    function (Controller,formatter,History,Hello) {
         "use strict";
 
         return Controller.extend("viatrix.controller.VendorRegistrationForm", {
@@ -250,6 +250,14 @@ sap.ui.define([
                         MessageBox.error("Error" + oResp.responseText);
                     }
                 })
+            },
+            handelAddCategoryFile: function(oEvent){
+                var oItem = new sap.m.ColumnListItem({
+                    cells: [new sap.m.Input().addStyleClass("voInputText"),new sap.m.Input().addStyleClass("voInputText"),new sap.m.Input().addStyleClass("voInputText"),new sap.m.Input().addStyleClass("voInputText"),new sap.m.Input().addStyleClass("voInputText")]
+                });
+
+                var oTable = this.getView().byId("detailsTable");
+                oTable.addItem(oItem);
             }
         });
     });

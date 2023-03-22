@@ -356,7 +356,7 @@
             <ToolbarSpacer />
             <Button icon="sap-icon://add" text="{i18n>addRow}" tooltip="{i18n>addRow}" class="voBtnDefault" enabled="{oSupplierDetailModel>/isEditable}" press="handelAddCategoryFile" visible="{oSupplierDetailModel>/categoryUploadVisible}" />
         </Toolbar>
-            <Table class="sigTable" selectionChange="onDocSelect" items="{oVendorDetailModel>/contacts}">
+            <Table id="detailsTable" class="sigTable" selectionChange="onDocSelect" items="{oVendorDetailModel>/contacts}">
                 <columns>
                     <Column width="20%">
                         <Label design="Bold" text="{i18n>firstName}" />
