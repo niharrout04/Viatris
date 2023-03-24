@@ -377,13 +377,12 @@
                 </columns>
                 <items>
                     <ColumnListItem class="documentrow">
-
                         <cells>
-                            <Input class="voInputText" value="{oVendorDetailModel>firstName}" enabled="true" />
-                            <Input class="voInputText" value="{oVendorDetailModel>name}" enabled="true" />
-                            <Input class="voInputText" value="{oVendorDetailModel>telephone}" enabled="true" />
-                            <Input class="voInputText" value="{oVendorDetailModel>department}" enabled="true" />
-                            <Input class="voInputText" value="{oVendorDetailModel>contactFunction}" enabled="true" />
+                            <Input class="voInputText" value="{oVendorDetailModel>firstName}" enabled="true" id="fName" liveChange="onLiveChange"/>
+                            <Input class="voInputText" value="{oVendorDetailModel>name}" enabled="true" id="lName" />
+                            <Input class="voInputText" value="{oVendorDetailModel>telephone}" enabled="true" id="tele"/>
+                            <Input class="voInputText" value="{oVendorDetailModel>department}" enabled="true" id="dept"/>
+                            <Input class="voInputText" value="{oVendorDetailModel>contactFunction}" enabled="true" id="contactFn"/>
                         </cells>
                     </ColumnListItem>
                 </items>

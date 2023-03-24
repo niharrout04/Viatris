@@ -258,6 +258,22 @@ sap.ui.define([
 
                 var oTable = this.getView().byId("detailsTable");
                 oTable.addItem(oItem);
+            },
+            onLiveChange: function () {
+                var that = this;
+                var oView = this.getView();
+                var oTable = this.getView().byId("detailsTable");
+                var oModel = oTable.getModel();
+               
+                var payload = {
+                    "firstName" :oView.byId("fName").getValue(),
+                    "name": oView.byId("lName").getValue(),
+                    "telephone": oView.byId("tele").getValue(),
+                    "department": oView.byId("dept").getValue(),
+                    "contactFunction":oView.byId("contactFn").getValue()
+                }
             }
+
+            
         });
     });
