@@ -71,7 +71,7 @@
                         </Input>
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">
-                        <Label text="{i18n>shipCondition}"class="voGridLabel" required="true" />
+                        <Label text="{i18n>shipCondition}" class="voGridLabel" required="true" />
                         <Input class="voInputText" value="{oVendorDetailModel>shipCondition}" enabled="true" type="Email" />
                     </VBox>
                     <VBox class="sapUiSmallMarginTop">

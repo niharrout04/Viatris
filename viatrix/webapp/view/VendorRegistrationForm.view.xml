@@ -28,11 +28,11 @@
                             <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.CompanyCodeInformation" type="XML" />
                         </content>
                     </WizardStep>
-                    <!-- <WizardStep id="purchasingId" class="voWizardstep" title="Purchasing Organisation Information">
+                    <WizardStep id="purchasingId" class="voWizardstep" title="Purchasing Organisation Information">
                         <content>
                             <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.PurchasingOrganisationInformation" type="XML" />
                         </content>
-                    </WizardStep> -->
+                    </WizardStep>
                     <WizardStep id="documentId" class="voWizardstep" title="Documents &amp; Attachments">
                         <content>
                             <core:Fragment fragmentName="viatrix.fragment.VendorRegistrationForm.DocumentAndAttachments" type="XML" />
