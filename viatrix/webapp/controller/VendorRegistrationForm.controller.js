@@ -158,7 +158,7 @@ sap.ui.define([
                 this.handleButtonsVisibility();
                 // }
 
-
+                
             },
             onDialogBackButton: function () {
                 this._iSelectedStepIndex = this._oWizard.getSteps().indexOf(this._oSelectedStep);
